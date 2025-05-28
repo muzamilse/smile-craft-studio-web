@@ -1,0 +1,88 @@
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Calendar, Zap, Clock, Star } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import BookingModal from "@/components/BookingModal";
+
+const TeethWhitening = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+      <WhatsAppButton />
+
+      {/* Hero Section */}
+      <section className="container mx-auto px-4 py-16 bg-gradient-to-b from-blue-50 to-white">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
+              Professional 
+              <span className="text-blue-600"> Teeth Whitening</span>
+            </h1>
+            <p className="text-xl text-gray-600 leading-relaxed">
+              Achieve a brighter, more confident smile with our professional whitening treatments. Safe, effective, and up to 8 shades whiter in just one visit.
+            </p>
+            <BookingModal>
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
+                <Calendar className="h-5 w-5 mr-2" />
+                Book Whitening Session
+              </Button>
+            </BookingModal>
+          </div>
+          <div className="relative">
+            <img 
+              src="/lovable-uploads/cd50fbe4-44af-47cc-902d-1f7891702636.png" 
+              alt="Teeth whitening before and after"
+              className="rounded-2xl shadow-2xl w-full"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Treatment Options */}
+      <section className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+            Whitening Treatment Options
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Card className="border-none shadow-lg">
+            <CardContent className="p-8">
+              <Zap className="h-12 w-12 text-blue-600 mb-4" />
+              <h3 className="text-2xl font-semibold text-gray-800 mb-4">In-Office Whitening</h3>
+              <ul className="space-y-2 text-gray-600 mb-6">
+                <li>• Up to 8 shades whiter in 1 hour</li>
+                <li>• Professional-strength gel</li>
+                <li>• Immediate, dramatic results</li>
+                <li>• Safe and comfortable</li>
+              </ul>
+              <p className="text-blue-600 font-semibold text-lg">$399</p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-none shadow-lg">
+            <CardContent className="p-8">
+              <Clock className="h-12 w-12 text-blue-600 mb-4" />
+              <h3 className="text-2xl font-semibold text-gray-800 mb-4">Take-Home Kit</h3>
+              <ul className="space-y-2 text-gray-600 mb-6">
+                <li>• Custom-fitted trays</li>
+                <li>• Professional whitening gel</li>
+                <li>• Gradual whitening over 2 weeks</li>
+                <li>• Touch-up treatments included</li>
+              </ul>
+              <p className="text-blue-600 font-semibold text-lg">$299</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default TeethWhitening;
