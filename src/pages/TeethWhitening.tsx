@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Zap, Clock, Star } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -32,11 +33,16 @@ const TeethWhitening = () => {
             </BookingModal>
           </div>
           <div className="relative">
-            <img 
-              src="/lovable-uploads/cd50fbe4-44af-47cc-902d-1f7891702636.png" 
-              alt="Teeth whitening before and after"
-              className="rounded-2xl shadow-2xl w-full"
-            />
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+              <AspectRatio ratio={4 / 3}>
+                <img 
+                  src="/lovable-uploads/cd50fbe4-44af-47cc-902d-1f7891702636.png" 
+                  alt="Teeth whitening before and after"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/10 to-transparent"></div>
+              </AspectRatio>
+            </div>
           </div>
         </div>
       </section>

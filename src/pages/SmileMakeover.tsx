@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Star, Palette, CheckCircle } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -32,11 +33,16 @@ const SmileMakeover = () => {
             </BookingModal>
           </div>
           <div className="relative">
-            <img 
-              src="/lovable-uploads/b9d7e9c1-f823-4c10-ae29-6694c5a422db.png" 
-              alt="Complete smile makeover transformation"
-              className="rounded-2xl shadow-2xl w-full"
-            />
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+              <AspectRatio ratio={4 / 3}>
+                <img 
+                  src="/lovable-uploads/b9d7e9c1-f823-4c10-ae29-6694c5a422db.png" 
+                  alt="Complete smile makeover transformation"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/10 to-transparent"></div>
+              </AspectRatio>
+            </div>
           </div>
         </div>
       </section>

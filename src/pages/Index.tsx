@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, CheckCircle, Star, Phone } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -49,14 +50,19 @@ const Index = () => {
             </div>
           </div>
           <div className="relative">
-            <img 
-              src="/lovable-uploads/4354423c-60c5-498f-a18a-31dde1580202.png" 
-              alt="Beautiful smile transformation"
-              className="rounded-2xl shadow-2xl w-full"
-            />
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4">
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+              <AspectRatio ratio={4 / 3}>
+                <img 
+                  src="/lovable-uploads/4354423c-60c5-498f-a18a-31dde1580202.png" 
+                  alt="Beautiful smile transformation"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/10 to-transparent"></div>
+              </AspectRatio>
+            </div>
+            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-6 max-w-xs">
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-8 w-8 text-green-500" />
+                <CheckCircle className="h-8 w-8 text-green-500 flex-shrink-0" />
                 <div>
                   <p className="font-semibold text-gray-800">Free Consultation</p>
                   <p className="text-sm text-gray-600">No obligation assessment</p>
@@ -79,79 +85,99 @@ const Index = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <Card className="hover:shadow-lg transition-shadow duration-300">
-            <CardContent className="p-6">
-              <div className="mb-4">
-                <img 
-                  src="/lovable-uploads/2fca1257-4c15-422b-b3ea-e2581e900e10.png" 
-                  alt="Dental Implants"
-                  className="w-full h-32 object-cover rounded-lg"
-                />
+          <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-0 shadow-md">
+            <CardContent className="p-0">
+              <div className="relative overflow-hidden rounded-t-lg">
+                <AspectRatio ratio={16 / 10}>
+                  <img 
+                    src="/lovable-uploads/2fca1257-4c15-422b-b3ea-e2581e900e10.png" 
+                    alt="Dental Implants"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </AspectRatio>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Dental Implants</h3>
-              <p className="text-gray-600 text-sm mb-4">
-                Permanent tooth replacement solution that looks and feels natural.
-              </p>
-              <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-50">
-                Learn More
-              </Button>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">Dental Implants</h3>
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                  Permanent tooth replacement solution that looks and feels natural.
+                </p>
+                <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-50 transition-colors">
+                  Learn More
+                </Button>
+              </div>
             </CardContent>
           </Card>
 
-          <Card className="hover:shadow-lg transition-shadow duration-300">
-            <CardContent className="p-6">
-              <div className="mb-4">
-                <img 
-                  src="/lovable-uploads/4354423c-60c5-498f-a18a-31dde1580202.png" 
-                  alt="Veneers & Smile Design"
-                  className="w-full h-32 object-cover rounded-lg"
-                />
+          <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-0 shadow-md">
+            <CardContent className="p-0">
+              <div className="relative overflow-hidden rounded-t-lg">
+                <AspectRatio ratio={16 / 10}>
+                  <img 
+                    src="/lovable-uploads/4354423c-60c5-498f-a18a-31dde1580202.png" 
+                    alt="Veneers & Smile Design"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </AspectRatio>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Veneers & Smile Design</h3>
-              <p className="text-gray-600 text-sm mb-4">
-                Custom porcelain veneers for a Hollywood-worthy smile transformation.
-              </p>
-              <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-50">
-                Learn More
-              </Button>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">Veneers & Smile Design</h3>
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                  Custom porcelain veneers for a Hollywood-worthy smile transformation.
+                </p>
+                <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-50 transition-colors">
+                  Learn More
+                </Button>
+              </div>
             </CardContent>
           </Card>
 
-          <Card className="hover:shadow-lg transition-shadow duration-300">
-            <CardContent className="p-6">
-              <div className="mb-4">
-                <img 
-                  src="/lovable-uploads/cd50fbe4-44af-47cc-902d-1f7891702636.png" 
-                  alt="Teeth Whitening"
-                  className="w-full h-32 object-cover rounded-lg"
-                />
+          <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-0 shadow-md">
+            <CardContent className="p-0">
+              <div className="relative overflow-hidden rounded-t-lg">
+                <AspectRatio ratio={16 / 10}>
+                  <img 
+                    src="/lovable-uploads/cd50fbe4-44af-47cc-902d-1f7891702636.png" 
+                    alt="Teeth Whitening"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </AspectRatio>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Teeth Whitening</h3>
-              <p className="text-gray-600 text-sm mb-4">
-                Professional whitening for a brighter, more confident smile.
-              </p>
-              <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-50">
-                Learn More
-              </Button>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">Teeth Whitening</h3>
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                  Professional whitening for a brighter, more confident smile.
+                </p>
+                <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-50 transition-colors">
+                  Learn More
+                </Button>
+              </div>
             </CardContent>
           </Card>
 
-          <Card className="hover:shadow-lg transition-shadow duration-300">
-            <CardContent className="p-6">
-              <div className="mb-4">
-                <img 
-                  src="/lovable-uploads/b9d7e9c1-f823-4c10-ae29-6694c5a422db.png" 
-                  alt="Complete Smile Makeover"
-                  className="w-full h-32 object-cover rounded-lg"
-                />
+          <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-0 shadow-md">
+            <CardContent className="p-0">
+              <div className="relative overflow-hidden rounded-t-lg">
+                <AspectRatio ratio={16 / 10}>
+                  <img 
+                    src="/lovable-uploads/b9d7e9c1-f823-4c10-ae29-6694c5a422db.png" 
+                    alt="Complete Smile Makeover"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </AspectRatio>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Complete Smile Makeover</h3>
-              <p className="text-gray-600 text-sm mb-4">
-                Comprehensive treatment combining multiple procedures for total transformation.
-              </p>
-              <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-50">
-                Learn More
-              </Button>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">Complete Smile Makeover</h3>
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                  Comprehensive treatment combining multiple procedures for total transformation.
+                </p>
+                <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-50 transition-colors">
+                  Learn More
+                </Button>
+              </div>
             </CardContent>
           </Card>
         </div>

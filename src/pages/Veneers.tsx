@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Star, Palette, Shield } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -32,11 +33,16 @@ const Veneers = () => {
             </BookingModal>
           </div>
           <div className="relative">
-            <img 
-              src="/lovable-uploads/4354423c-60c5-498f-a18a-31dde1580202.png" 
-              alt="Beautiful veneer results"
-              className="rounded-2xl shadow-2xl w-full"
-            />
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+              <AspectRatio ratio={4 / 3}>
+                <img 
+                  src="/lovable-uploads/4354423c-60c5-498f-a18a-31dde1580202.png" 
+                  alt="Beautiful veneer results"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/10 to-transparent"></div>
+              </AspectRatio>
+            </div>
           </div>
         </div>
       </section>
