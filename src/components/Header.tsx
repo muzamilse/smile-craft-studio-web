@@ -1,4 +1,3 @@
-
 import { Phone, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
@@ -65,9 +64,8 @@ const Header = () => {
           </NavigationMenu>
 
           <div className="flex items-center space-x-4">
-            <div className="hidden md:flex items-center space-x-2 text-gray-600">
-              <Phone className="h-4 w-4" />
-              <span className="text-sm">(555) 123-4567</span>
+            <div className="hidden md:flex items-center">
+              <Phone className="h-5 w-5 text-gray-600 hover:text-blue-600 transition-colors cursor-pointer" />
             </div>
             <BookingModal>
               <Button className="bg-blue-600 hover:bg-blue-700 text-white">
