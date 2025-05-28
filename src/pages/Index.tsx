@@ -187,7 +187,7 @@ const Index = () => {
       <section className="container mx-auto px-4 py-16 bg-blue-50">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
-            Why Choose SmileCraft Studio?
+            Why Choose Dr Mourad Gamani?
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             We're committed to providing exceptional aesthetic dental care with the latest technology and techniques.
