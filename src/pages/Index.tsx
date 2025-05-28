@@ -53,8 +53,8 @@ const Index = () => {
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <AspectRatio ratio={4 / 3}>
                 <img 
-                  src="/lovable-uploads/4354423c-60c5-498f-a18a-31dde1580202.png" 
-                  alt="Beautiful smile transformation"
+                  src="/lovable-uploads/ff81044a-e72d-416c-b466-28e4991ab4fc.png" 
+                  alt="Professional dental surgery in modern clinic"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/10 to-transparent"></div>
