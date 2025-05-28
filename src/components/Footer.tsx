@@ -1,5 +1,5 @@
 
-import { Phone, WhatsApp, Facebook, Instagram } from "lucide-react";
+import { Phone, MessageCircle, Facebook, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -46,7 +46,7 @@ const Footer = () => {
                 <span>(555) 123-4567</span>
               </div>
               <div className="flex items-center space-x-2">
-                <WhatsApp className="h-4 w-4" />
+                <MessageCircle className="h-4 w-4" />
                 <span>WhatsApp Consultation</span>
               </div>
               <p>123 Dental Ave, Suite 100<br />Beautiful City, BC 12345</p>
