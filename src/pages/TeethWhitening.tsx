@@ -15,18 +15,18 @@ const TeethWhitening = () => {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 bg-gradient-to-b from-blue-50 to-white">
+      <section className="container mx-auto px-4 py-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
               Professional 
-              <span className="text-blue-600"> Teeth Whitening</span>
+              <span className="text-black"> Teeth Whitening</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
               Achieve a brighter, more confident smile with our professional whitening treatments. Safe, effective, and up to 8 shades whiter in just one visit.
             </p>
             <BookingModal>
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
+              <Button size="lg" className="bg-black hover:bg-gray-800 text-white px-8 py-4 text-lg">
                 <Calendar className="h-5 w-5 mr-2" />
                 Book Whitening Session
               </Button>
@@ -40,7 +40,7 @@ const TeethWhitening = () => {
                   alt="Teeth whitening before and after"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/10 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
               </AspectRatio>
             </div>
           </div>
@@ -58,7 +58,7 @@ const TeethWhitening = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <Card className="border-none shadow-lg">
             <CardContent className="p-8">
-              <Zap className="h-12 w-12 text-blue-600 mb-4" />
+              <Zap className="h-12 w-12 text-black mb-4" />
               <h3 className="text-2xl font-semibold text-gray-800 mb-4">In-Office Whitening</h3>
               <ul className="space-y-2 text-gray-600 mb-6">
                 <li>• Up to 8 shades whiter in 1 hour</li>
@@ -66,13 +66,13 @@ const TeethWhitening = () => {
                 <li>• Immediate, dramatic results</li>
                 <li>• Safe and comfortable</li>
               </ul>
-              <p className="text-blue-600 font-semibold text-lg">$399</p>
+              <p className="text-black font-semibold text-lg">$399</p>
             </CardContent>
           </Card>
 
           <Card className="border-none shadow-lg">
             <CardContent className="p-8">
-              <Clock className="h-12 w-12 text-blue-600 mb-4" />
+              <Clock className="h-12 w-12 text-black mb-4" />
               <h3 className="text-2xl font-semibold text-gray-800 mb-4">Take-Home Kit</h3>
               <ul className="space-y-2 text-gray-600 mb-6">
                 <li>• Custom-fitted trays</li>
@@ -80,7 +80,7 @@ const TeethWhitening = () => {
                 <li>• Gradual whitening over 2 weeks</li>
                 <li>• Touch-up treatments included</li>
               </ul>
-              <p className="text-blue-600 font-semibold text-lg">$299</p>
+              <p className="text-black font-semibold text-lg">$299</p>
             </CardContent>
           </Card>
         </div>

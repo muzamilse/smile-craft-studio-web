@@ -15,18 +15,18 @@ const Veneers = () => {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 bg-gradient-to-b from-blue-50 to-white">
+      <section className="container mx-auto px-4 py-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
               Porcelain Veneers &
-              <span className="text-blue-600"> Custom Smile Design</span>
+              <span className="text-black"> Custom Smile Design</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
               Transform your smile with ultra-thin porcelain veneers. Correct chips, gaps, stains, and misalignment for a Hollywood-worthy smile that looks completely natural.
             </p>
             <BookingModal>
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
+              <Button size="lg" className="bg-black hover:bg-gray-800 text-white px-8 py-4 text-lg">
                 <Calendar className="h-5 w-5 mr-2" />
                 Get Your Smile Design
               </Button>
@@ -40,7 +40,7 @@ const Veneers = () => {
                   alt="Beautiful veneer results"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/10 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
               </AspectRatio>
             </div>
           </div>
@@ -58,7 +58,7 @@ const Veneers = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Card className="border-none shadow-lg">
             <CardContent className="p-6 text-center">
-              <Palette className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+              <Palette className="h-12 w-12 text-black mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-800 mb-2">Natural Appearance</h3>
               <p className="text-gray-600">
                 Custom-crafted to match your natural teeth with perfect color, shape, and translucency.
@@ -68,7 +68,7 @@ const Veneers = () => {
 
           <Card className="border-none shadow-lg">
             <CardContent className="p-6 text-center">
-              <Shield className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+              <Shield className="h-12 w-12 text-black mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-800 mb-2">Stain Resistant</h3>
               <p className="text-gray-600">
                 Porcelain veneers resist coffee, wine, and other stains better than natural teeth.
@@ -78,7 +78,7 @@ const Veneers = () => {
 
           <Card className="border-none shadow-lg">
             <CardContent className="p-6 text-center">
-              <Star className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+              <Star className="h-12 w-12 text-black mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-800 mb-2">Minimal Preparation</h3>
               <p className="text-gray-600">
                 Ultra-thin veneers require minimal tooth preparation while providing maximum impact.
