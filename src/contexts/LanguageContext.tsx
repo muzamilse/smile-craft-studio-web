@@ -122,7 +122,7 @@ const translations = {
     'excellence.title.standards': 'Clinique',
     'excellence.subtitle': 'Notre pratique maintient les plus hauts standards de soins cliniques avec des protocoles de stérilisation avancés et des équipements de pointe.',
     'excellence.sterilization': 'Protocole de Stérilisation',
-    'excellence.sterilization.desc': 'Stérilisation à l\'autoclave de qualité hospitalière et instruments à usage unique assurent une conformité complète du contrôle des infections.',
+    'excellence.sterilization.desc': 'Stérilisation à l\'autoclave de qualité hospitalière et instruments à usage unique pour un contrôle complet des infections.',
     'excellence.technology': 'Technologie Avancée',
     'excellence.technology.desc': 'Imagerie CBCT 3D, empreintes numériques et chirurgie guidée par ordinateur pour une planification de traitement précise.',
     'excellence.certification': 'Certification du Conseil',
