@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, CheckCircle, Star, Phone, Shield, Award, Users } from "lucide-react";
@@ -7,8 +6,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import BookingModal from "@/components/BookingModal";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 relative overflow-hidden">
       {/* Medical luxury background effects */}
@@ -26,42 +28,42 @@ const Index = () => {
             <div className="space-y-8">
               <div className="space-y-6">
                 <h1 className="text-5xl lg:text-6xl font-light text-slate-800 leading-tight tracking-tight">
-                  Advanced 
-                  <span className="block text-blue-800 font-medium"> Oral Surgery</span> 
-                  <span className="block text-slate-700 font-medium"> & Aesthetic Dentistry</span>
+                  {t('hero.title.advanced')}
+                  <span className="block text-slate-700 font-medium">{t('hero.title.oral')}</span> 
+                  <span className="block text-slate-600 font-medium">{t('hero.title.aesthetic')}</span>
                 </h1>
                 <p className="text-xl text-slate-600 leading-relaxed font-light max-w-xl">
-                  Experience precision dental implantology and cosmetic restoration with state-of-the-art technology. Our specialist focus ensures optimal oral health outcomes and beautiful, natural-looking results.
+                  {t('hero.subtitle')}
                 </p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-6">
                 <BookingModal>
-                  <Button size="lg" className="bg-blue-800 hover:bg-blue-900 text-white px-12 py-8 text-xl font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Button size="lg" className="bg-slate-800 hover:bg-slate-900 text-white px-12 py-8 text-xl font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
                     <Calendar className="h-6 w-6 mr-3" />
-                    Schedule Clinical Consultation
+                    {t('hero.cta.schedule')}
                   </Button>
                 </BookingModal>
                 <Button variant="outline" size="lg" className="border-2 border-slate-400 text-slate-700 hover:bg-slate-100 px-12 py-8 text-xl font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
                   <Phone className="h-6 w-6 mr-3" />
-                  Emergency Consultation
+                  {t('hero.cta.emergency')}
                 </Button>
               </div>
               
               <div className="flex items-center space-x-8 pt-8">
                 <div className="flex items-center space-x-2">
-                  <Shield className="h-6 w-6 text-blue-600" />
-                  <span className="text-slate-700 font-medium text-lg">Board Certified</span>
+                  <Shield className="h-6 w-6 text-slate-600" />
+                  <span className="text-slate-700 font-medium text-lg">{t('hero.badge.certified')}</span>
                 </div>
                 <div className="h-8 w-px bg-slate-300"></div>
                 <div className="flex items-center space-x-2">
-                  <Award className="h-6 w-6 text-blue-600" />
-                  <span className="text-slate-700 font-medium text-lg">15+ Years Experience</span>
+                  <Award className="h-6 w-6 text-slate-600" />
+                  <span className="text-slate-700 font-medium text-lg">{t('hero.badge.experience')}</span>
                 </div>
                 <div className="h-8 w-px bg-slate-300"></div>
                 <div className="flex items-center space-x-2">
-                  <Users className="h-6 w-6 text-blue-600" />
-                  <span className="text-slate-700 font-medium text-lg">2000+ Procedures</span>
+                  <Users className="h-6 w-6 text-slate-600" />
+                  <span className="text-slate-700 font-medium text-lg">{t('hero.badge.procedures')}</span>
                 </div>
               </div>
             </div>
@@ -79,12 +81,12 @@ const Index = () => {
               </div>
               <div className="absolute -bottom-8 -left-4 bg-white/95 rounded-2xl shadow-xl p-8 max-w-xs border border-slate-200">
                 <div className="flex items-center space-x-4">
-                  <div className="w-14 h-14 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg">
+                  <div className="w-14 h-14 bg-slate-600 rounded-lg flex items-center justify-center shadow-lg">
                     <CheckCircle className="h-8 w-8 text-white" />
                   </div>
                   <div>
-                    <p className="font-semibold text-slate-800 text-xl">Sterile Protocol</p>
-                    <p className="text-sm text-slate-600">Hospital-grade safety standards</p>
+                    <p className="font-semibold text-slate-800 text-xl">{t('hero.badge.sterile')}</p>
+                    <p className="text-sm text-slate-600">{t('hero.badge.safety')}</p>
                   </div>
                 </div>
               </div>
@@ -97,13 +99,14 @@ const Index = () => {
           <div className="container mx-auto px-8">
             <div className="text-center mb-20 max-w-4xl mx-auto">
               <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6 tracking-tight">
-                Specialized <span className="text-blue-800">Clinical Services</span>
+                {t('services.title')} <span className="text-slate-700">{t('services.title.clinical')}</span>
               </h2>
               <p className="text-xl text-slate-600 font-light leading-relaxed">
-                Our practice specializes in advanced oral surgery, implantology, and aesthetic restorative procedures using cutting-edge dental technology.
+                {t('services.subtitle')}
               </p>
             </div>
 
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
               <Card className="group hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border border-slate-200 shadow-lg bg-white rounded-2xl overflow-hidden">
                 <CardContent className="p-0">
@@ -114,16 +117,16 @@ const Index = () => {
                         alt="Osseointegrated Dental Implants"
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-blue-800/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-800/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                     </AspectRatio>
                   </div>
                   <div className="p-8">
-                    <h3 className="text-xl font-semibold text-slate-800 mb-3">Osseointegrated Implants</h3>
+                    <h3 className="text-xl font-semibold text-slate-800 mb-3">{t('services.implants')}</h3>
                     <p className="text-slate-600 text-sm mb-6 leading-relaxed">
-                      Titanium implant placement with guided surgery for optimal osseointegration and long-term stability.
+                      {t('services.implants.desc')}
                     </p>
-                    <Button variant="outline" className="w-full border border-blue-600 text-blue-600 hover:bg-blue-50 transition-all duration-300 rounded-lg">
-                      View Procedure Details
+                    <Button variant="outline" className="w-full border border-slate-600 text-slate-600 hover:bg-slate-50 transition-all duration-300 rounded-lg">
+                      {t('services.view.details')}
                     </Button>
                   </div>
                 </CardContent>
@@ -142,12 +145,12 @@ const Index = () => {
                     </AspectRatio>
                   </div>
                   <div className="p-8">
-                    <h3 className="text-xl font-semibold text-slate-800 mb-3">Porcelain Laminate Veneers</h3>
+                    <h3 className="text-xl font-semibold text-slate-800 mb-3">{t('services.veneers')}</h3>
                     <p className="text-slate-600 text-sm mb-6 leading-relaxed">
-                      Ultra-thin ceramic restorations for aesthetic enhancement with minimal tooth preparation.
+                      {t('services.veneers.desc')}
                     </p>
-                    <Button variant="outline" className="w-full border border-blue-600 text-blue-600 hover:bg-blue-50 transition-all duration-300 rounded-lg">
-                      View Procedure Details
+                    <Button variant="outline" className="w-full border border-slate-600 text-slate-600 hover:bg-slate-50 transition-all duration-300 rounded-lg">
+                      {t('services.view.details')}
                     </Button>
                   </div>
                 </CardContent>
@@ -166,12 +169,12 @@ const Index = () => {
                     </AspectRatio>
                   </div>
                   <div className="p-8">
-                    <h3 className="text-xl font-semibold text-slate-800 mb-3">Professional Bleaching</h3>
+                    <h3 className="text-xl font-semibold text-slate-800 mb-3">{t('services.whitening')}</h3>
                     <p className="text-slate-600 text-sm mb-6 leading-relaxed">
-                      Clinical-grade carbamide peroxide treatment for safe, effective tooth whitening.
+                      {t('services.whitening.desc')}
                     </p>
-                    <Button variant="outline" className="w-full border border-blue-600 text-blue-600 hover:bg-blue-50 transition-all duration-300 rounded-lg">
-                      View Procedure Details
+                    <Button variant="outline" className="w-full border border-slate-600 text-slate-600 hover:bg-slate-50 transition-all duration-300 rounded-lg">
+                      {t('services.view.details')}
                     </Button>
                   </div>
                 </CardContent>
@@ -190,12 +193,12 @@ const Index = () => {
                     </AspectRatio>
                   </div>
                   <div className="p-8">
-                    <h3 className="text-xl font-semibold text-slate-800 mb-3">Full Mouth Rehabilitation</h3>
+                    <h3 className="text-xl font-semibold text-slate-800 mb-3">{t('services.makeover')}</h3>
                     <p className="text-slate-600 text-sm mb-6 leading-relaxed">
-                      Comprehensive prosthodontic reconstruction combining multiple treatment modalities.
+                      {t('services.makeover.desc')}
                     </p>
-                    <Button variant="outline" className="w-full border border-blue-600 text-blue-600 hover:bg-blue-50 transition-all duration-300 rounded-lg">
-                      View Procedure Details
+                    <Button variant="outline" className="w-full border border-slate-600 text-slate-600 hover:bg-slate-50 transition-all duration-300 rounded-lg">
+                      {t('services.view.details')}
                     </Button>
                   </div>
                 </CardContent>
@@ -209,41 +212,41 @@ const Index = () => {
           <div className="container mx-auto px-8">
             <div className="text-center mb-20 max-w-4xl mx-auto">
               <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6 tracking-tight">
-                Clinical <span className="text-blue-800">Excellence Standards</span>
+                {t('excellence.title')} <span className="text-slate-700">{t('excellence.title.standards')}</span>
               </h2>
               <p className="text-xl text-slate-600 font-light leading-relaxed">
-                Our practice maintains the highest standards of clinical care with advanced sterilization protocols and state-of-the-art equipment.
+                {t('excellence.subtitle')}
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
               <div className="text-center group">
-                <div className="w-24 h-24 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-xl transition-all duration-500 transform group-hover:scale-110">
+                <div className="w-24 h-24 bg-slate-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-xl transition-all duration-500 transform group-hover:scale-110">
                   <Shield className="h-12 w-12 text-white" />
                 </div>
-                <h3 className="text-2xl font-semibold text-slate-800 mb-4">Sterilization Protocol</h3>
+                <h3 className="text-2xl font-semibold text-slate-800 mb-4">{t('excellence.sterilization')}</h3>
                 <p className="text-slate-600 leading-relaxed font-light text-lg">
-                  Hospital-grade autoclave sterilization and single-use instruments ensure complete infection control compliance.
+                  {t('excellence.sterilization.desc')}
                 </p>
               </div>
 
               <div className="text-center group">
-                <div className="w-24 h-24 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-xl transition-all duration-500 transform group-hover:scale-110">
+                <div className="w-24 h-24 bg-slate-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-xl transition-all duration-500 transform group-hover:scale-110">
                   <Star className="h-12 w-12 text-white" />
                 </div>
-                <h3 className="text-2xl font-semibold text-slate-800 mb-4">Advanced Technology</h3>
+                <h3 className="text-2xl font-semibold text-slate-800 mb-4">{t('excellence.technology')}</h3>
                 <p className="text-slate-600 leading-relaxed font-light text-lg">
-                  3D CBCT imaging, digital impressions, and computer-guided surgery for precise treatment planning.
+                  {t('excellence.technology.desc')}
                 </p>
               </div>
 
               <div className="text-center group">
-                <div className="w-24 h-24 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-xl transition-all duration-500 transform group-hover:scale-110">
+                <div className="w-24 h-24 bg-slate-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-xl transition-all duration-500 transform group-hover:scale-110">
                   <Award className="h-12 w-12 text-white" />
                 </div>
-                <h3 className="text-2xl font-semibold text-slate-800 mb-4">Board Certification</h3>
+                <h3 className="text-2xl font-semibold text-slate-800 mb-4">{t('excellence.certification')}</h3>
                 <p className="text-slate-600 leading-relaxed font-light text-lg">
-                  Specialized training in oral surgery and prosthodontics with continuous medical education requirements.
+                  {t('excellence.certification.desc')}
                 </p>
               </div>
             </div>
@@ -253,24 +256,24 @@ const Index = () => {
         {/* CTA Section */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-8">
-            <div className="bg-gradient-to-r from-blue-800 to-slate-800 rounded-3xl p-12 lg:p-16 text-center text-white max-w-5xl mx-auto shadow-2xl relative overflow-hidden">
+            <div className="bg-gradient-to-r from-slate-800 to-slate-700 rounded-3xl p-12 lg:p-16 text-center text-white max-w-5xl mx-auto shadow-2xl relative overflow-hidden">
               <div className="relative z-10">
                 <h2 className="text-4xl lg:text-5xl font-light mb-6 tracking-tight">
-                  Schedule Your <span className="text-blue-200">Clinical Assessment</span>
+                  {t('cta.title')} <span className="text-slate-200">{t('cta.title.assessment')}</span>
                 </h2>
                 <p className="text-xl mb-10 opacity-90 font-light leading-relaxed max-w-2xl mx-auto">
-                  Begin your treatment journey with a comprehensive oral examination and personalized treatment planning session.
+                  {t('cta.subtitle')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
                   <BookingModal>
                     <Button size="lg" className="bg-white text-slate-800 hover:bg-slate-100 px-12 py-8 text-xl font-medium rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1">
                       <Calendar className="h-6 w-6 mr-3" />
-                      Book Clinical Consultation
+                      {t('cta.book')}
                     </Button>
                   </BookingModal>
-                  <Button variant="outline" size="lg" className="border-2 border-blue-200 text-blue-200 hover:bg-blue-700 hover:border-blue-200 px-12 py-8 text-xl font-medium rounded-xl transition-all duration-500">
+                  <Button variant="outline" size="lg" className="border-2 border-slate-200 text-slate-200 hover:bg-slate-700 hover:border-slate-200 px-12 py-8 text-xl font-medium rounded-xl transition-all duration-500">
                     <Phone className="h-6 w-6 mr-3" />
-                    Emergency Line
+                    {t('cta.emergency')}
                   </Button>
                 </div>
               </div>
