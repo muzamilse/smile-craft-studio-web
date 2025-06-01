@@ -1,8 +1,8 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, CheckCircle, Star, Phone, Shield, Award, Users, ArrowRight } from "lucide-react";
+import { Calendar, CheckCircle, Star, Phone, Shield, Award, Users } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -11,36 +11,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
   const { t } = useLanguage();
-
-  const caseStudies = [
-    {
-      id: 1,
-      title: "Complete Smile Transformation",
-      description: "Dental implants and porcelain veneers for a complete smile makeover",
-      beforeImage: "/lovable-uploads/b9d7e9c1-f823-4c10-ae29-6694c5a422db.png",
-      afterImage: "/lovable-uploads/4354423c-60c5-498f-a18a-31dde1580202.png",
-      treatment: "Implants + Veneers",
-      duration: "6 months"
-    },
-    {
-      id: 2,
-      title: "Professional Teeth Whitening",
-      description: "Advanced whitening treatment for natural-looking brightness",
-      beforeImage: "/lovable-uploads/cd50fbe4-44af-47cc-902d-1f7891702636.png",
-      afterImage: "/lovable-uploads/4354423c-60c5-498f-a18a-31dde1580202.png",
-      treatment: "Professional Whitening",
-      duration: "2 sessions"
-    },
-    {
-      id: 3,
-      title: "Aesthetic Veneer Enhancement",
-      description: "Ultra-thin porcelain veneers for perfect smile symmetry",
-      beforeImage: "/lovable-uploads/2fca1257-4c15-422b-b3ea-e2581e900e10.png",
-      afterImage: "/lovable-uploads/4354423c-60c5-498f-a18a-31dde1580202.png",
-      treatment: "Porcelain Veneers",
-      duration: "3 weeks"
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-zinc-50 to-stone-50 relative overflow-hidden">
@@ -129,107 +99,6 @@ const Index = () => {
                     <p className="text-slate-600 font-light tracking-wide text-lg">{t('hero.badge.safety')}</p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Before & After Case Studies Section - Ultra Luxury */}
-        <section className="py-40 bg-gradient-to-b from-slate-50/95 via-white/95 to-zinc-50/95 backdrop-blur-lg">
-          <div className="container mx-auto px-12">
-            <div className="text-center mb-32 max-w-6xl mx-auto">
-              <div className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-amber-100/90 via-gold-50/80 to-slate-100/90 border border-amber-300/40 rounded-full shadow-2xl backdrop-blur-lg mb-10">
-                <span className="text-amber-900 font-light text-sm tracking-[0.3em] uppercase">Transformations Exceptionnelles</span>
-              </div>
-              
-              <h2 className="text-6xl lg:text-7xl font-extralight text-slate-900 mb-10 tracking-tighter leading-tight">
-                Avant & <span className="text-slate-700 italic font-thin">Après</span>
-              </h2>
-              <p className="text-2xl text-slate-700 font-light leading-relaxed tracking-wide max-w-4xl mx-auto">
-                Découvrez les transformations exceptionnelles réalisées dans notre clinique. Chaque sourire raconte une histoire de confiance retrouvée.
-              </p>
-            </div>
-
-            <div className="max-w-8xl mx-auto">
-              <Carousel className="w-full" opts={{ align: "start", loop: true }}>
-                <CarouselContent className="-ml-8">
-                  {caseStudies.map((study) => (
-                    <CarouselItem key={study.id} className="pl-8 md:basis-1/2 lg:basis-1/3">
-                      <Card className="group hover:shadow-[0_60px_120px_rgba(0,0,0,0.15)] transition-all duration-1000 transform hover:-translate-y-8 border border-white/90 shadow-2xl bg-white/95 backdrop-blur-lg rounded-[3rem] overflow-hidden hover:border-amber-300/50 h-full">
-                        <CardContent className="p-0 h-full flex flex-col">
-                          <div className="relative overflow-hidden flex-1">
-                            <div className="grid grid-cols-2 h-full min-h-[300px]">
-                              {/* Before Image */}
-                              <div className="relative overflow-hidden">
-                                <div className="absolute top-6 left-6 z-10 bg-slate-800/90 backdrop-blur-lg text-white px-6 py-3 rounded-full text-sm font-light tracking-wide shadow-xl">
-                                  Avant
-                                </div>
-                                <img 
-                                  src={study.beforeImage} 
-                                  alt={`Before - ${study.title}`}
-                                  className="w-full h-full object-cover transition-transform duration-1500 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-r from-slate-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-                              </div>
-                              
-                              {/* After Image */}
-                              <div className="relative overflow-hidden">
-                                <div className="absolute top-6 right-6 z-10 bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 text-white px-6 py-3 rounded-full text-sm font-light tracking-wide shadow-xl">
-                                  Après
-                                </div>
-                                <img 
-                                  src={study.afterImage} 
-                                  alt={`After - ${study.title}`}
-                                  className="w-full h-full object-cover transition-transform duration-1500 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-l from-amber-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-                              </div>
-                            </div>
-                          </div>
-                          
-                          <div className="p-12 flex-shrink-0">
-                            <div className="flex items-center justify-between mb-6">
-                              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-slate-100/80 to-amber-50/80 border border-slate-300/40 rounded-full shadow-lg backdrop-blur-sm">
-                                <span className="text-slate-800 font-light text-sm tracking-wide">{study.treatment}</span>
-                              </div>
-                              <div className="text-slate-600 font-light text-sm tracking-wide">{study.duration}</div>
-                            </div>
-                            
-                            <h3 className="text-2xl font-light text-slate-900 mb-6 tracking-wide leading-tight">{study.title}</h3>
-                            <p className="text-slate-600 text-lg mb-10 leading-relaxed font-light">
-                              {study.description}
-                            </p>
-                            
-                            <Button variant="outline" className="w-full border-2 border-slate-400/50 bg-white/60 text-slate-800 hover:bg-slate-50 hover:border-amber-400/60 transition-all duration-700 rounded-2xl py-8 font-light tracking-wide text-lg group/btn">
-                              Voir les détails
-                              <ArrowRight className="h-5 w-5 ml-3 transition-transform duration-300 group-hover/btn:translate-x-1" />
-                            </Button>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="left-[-80px] w-20 h-20 bg-white/95 backdrop-blur-lg border-2 border-slate-300/50 hover:bg-slate-50 hover:border-amber-400/60 shadow-2xl rounded-3xl transition-all duration-700" />
-                <CarouselNext className="right-[-80px] w-20 h-20 bg-white/95 backdrop-blur-lg border-2 border-slate-300/50 hover:bg-slate-50 hover:border-amber-400/60 shadow-2xl rounded-3xl transition-all duration-700" />
-              </Carousel>
-            </div>
-            
-            <div className="text-center mt-20">
-              <p className="text-slate-600 mb-10 text-xl font-light tracking-wide max-w-3xl mx-auto leading-relaxed">
-                Toutes les photos sont de vrais patients et utilisées avec permission. Les résultats individuels peuvent varier.
-              </p>
-              <div className="bg-gradient-to-r from-slate-50/90 via-amber-50/80 to-slate-50/90 backdrop-blur-lg rounded-[3rem] p-16 max-w-5xl mx-auto shadow-2xl border border-white/90">
-                <h3 className="text-3xl font-light text-slate-900 mb-8 tracking-wide">Découvrez Votre Potentiel de Transformation</h3>
-                <p className="text-slate-700 text-xl leading-relaxed font-light mb-12 max-w-3xl mx-auto">
-                  Planifiez une consultation privée pour discuter de vos objectifs et découvrir ce qui est possible pour votre sourire.
-                </p>
-                <BookingModal>
-                  <Button className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 hover:from-slate-800 hover:via-slate-700 hover:to-slate-800 text-white px-16 py-8 text-xl font-light rounded-3xl shadow-2xl hover:shadow-[0_40px_80px_rgba(0,0,0,0.15)] transition-all duration-1000 transform hover:-translate-y-3 tracking-wide">
-                    <Calendar className="h-7 w-7 mr-4" />
-                    Consultation Privée
-                  </Button>
-                </BookingModal>
               </div>
             </div>
           </div>
