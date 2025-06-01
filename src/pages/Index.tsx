@@ -1,8 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, CheckCircle, Star, Phone, Shield, Award, Users } from "lucide-react";
+import { Calendar, CheckCircle, Star, Phone, Shield, Award, Users, Quote } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -11,6 +11,66 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
   const { t } = useLanguage();
+
+  const beforeAfterCases = [
+    {
+      id: 1,
+      title: "Complete Smile Transformation",
+      description: "Full mouth rehabilitation with dental implants and porcelain crowns",
+      beforeImage: "/lovable-uploads/b9d7e9c1-f823-4c10-ae29-6694c5a422db.png",
+      afterImage: "/lovable-uploads/ff81044a-e72d-416c-b466-28e4991ab4fc.png",
+      treatment: "Dental Implants + Crowns",
+      duration: "6 months"
+    },
+    {
+      id: 2,
+      title: "Porcelain Veneers Makeover",
+      description: "Natural-looking smile enhancement with premium porcelain veneers",
+      beforeImage: "/lovable-uploads/4354423c-60c5-498f-a18a-31dde1580202.png",
+      afterImage: "/lovable-uploads/cd50fbe4-44af-47cc-902d-1f7891702636.png",
+      treatment: "Porcelain Veneers",
+      duration: "3 weeks"
+    },
+    {
+      id: 3,
+      title: "Professional Whitening Results",
+      description: "Advanced teeth whitening for a brilliant, confident smile",
+      beforeImage: "/lovable-uploads/2fca1257-4c15-422b-b3ea-e2581e900e10.png",
+      afterImage: "/lovable-uploads/cd50fbe4-44af-47cc-902d-1f7891702636.png",
+      treatment: "Professional Whitening",
+      duration: "1 session"
+    }
+  ];
+
+  const testimonials = [
+    {
+      id: 1,
+      name: "Sophie Martineau",
+      treatment: "Implants Dentaires",
+      rating: 5,
+      text: "Une transformation complète de mon sourire. L'équipe est exceptionnelle et les résultats dépassent toutes mes attentes. Je recommande vivement.",
+      location: "Paris, France",
+      date: "Novembre 2024"
+    },
+    {
+      id: 2,
+      name: "Jean-Claude Dubois", 
+      treatment: "Facettes en Porcelaine",
+      rating: 5,
+      text: "Un travail d'artiste ! Mes nouvelles facettes sont si naturelles que personne ne peut deviner que j'ai eu un traitement. Service impeccable.",
+      location: "Lyon, France",
+      date: "Octobre 2024"
+    },
+    {
+      id: 3,
+      name: "Marie-Élise Laurent",
+      treatment: "Blanchiment Professionnel", 
+      rating: 5,
+      text: "Résultats extraordinaires en une seule séance. Mon sourire n'a jamais été aussi éclatant. Une expérience de luxe du début à la fin.",
+      location: "Marseille, France",
+      date: "Septembre 2024"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-zinc-50 to-stone-50 relative overflow-hidden">
@@ -25,7 +85,7 @@ const Index = () => {
         <Header />
         <WhatsAppButton />
 
-        {/* Hero Section - Ultra Premium */}
+        {/* Hero Section */}
         <section className="container mx-auto px-12 py-40">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center max-w-8xl mx-auto">
             <div className="space-y-12">
@@ -104,7 +164,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Clinical Services Section - Ultra Luxury */}
+        {/* Clinical Services Section */}
         <section className="py-40 bg-gradient-to-b from-white/95 via-zinc-50/95 to-slate-50/95 backdrop-blur-lg">
           <div className="container mx-auto px-12">
             <div className="text-center mb-32 max-w-6xl mx-auto">
@@ -221,7 +281,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Clinical Excellence Section - Ultra Premium */}
+        {/* Clinical Excellence Section */}
         <section className="py-40 bg-gradient-to-b from-slate-50/95 via-zinc-50/95 to-white/95 backdrop-blur-lg">
           <div className="container mx-auto px-12">
             <div className="text-center mb-32 max-w-6xl mx-auto">
@@ -271,7 +331,142 @@ const Index = () => {
           </div>
         </section>
 
-        {/* CTA Section - Ultra Luxury */}
+        {/* Before & After Section - Ultra Luxury */}
+        <section className="py-40 bg-gradient-to-b from-white/95 via-slate-50/95 to-zinc-50/95 backdrop-blur-lg">
+          <div className="container mx-auto px-12">
+            <div className="text-center mb-32 max-w-6xl mx-auto">
+              <div className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-amber-100/90 via-gold-50/80 to-slate-100/90 border border-amber-300/40 rounded-full shadow-2xl backdrop-blur-lg mb-10">
+                <span className="text-amber-900 font-light text-sm tracking-[0.3em] uppercase">Transformations Remarquables</span>
+              </div>
+              
+              <h2 className="text-6xl lg:text-7xl font-extralight text-slate-900 mb-10 tracking-tighter leading-tight">
+                Avant & <span className="text-slate-700 italic font-thin">Après</span>
+              </h2>
+              <p className="text-2xl text-slate-700 font-light leading-relaxed tracking-wide max-w-4xl mx-auto">
+                Découvrez les transformations extraordinaires réalisées par notre équipe d'experts
+              </p>
+            </div>
+
+            <div className="max-w-7xl mx-auto">
+              <Carousel className="w-full">
+                <CarouselContent className="-ml-12">
+                  {beforeAfterCases.map((case_) => (
+                    <CarouselItem key={case_.id} className="pl-12 md:basis-1/2 lg:basis-1/3">
+                      <Card className="group overflow-hidden hover:shadow-[0_50px_100px_rgba(0,0,0,0.15)] transition-all duration-1000 transform hover:-translate-y-6 border border-white/90 shadow-2xl bg-white/95 backdrop-blur-lg rounded-[2.5rem]">
+                        <CardContent className="p-0">
+                          <div className="relative overflow-hidden">
+                            <AspectRatio ratio={16 / 12}>
+                              <div className="grid grid-cols-2 h-full">
+                                <div className="relative">
+                                  <img 
+                                    src={case_.beforeImage} 
+                                    alt={`Before ${case_.title}`}
+                                    className="w-full h-full object-cover transition-transform duration-1500 group-hover:scale-110"
+                                  />
+                                  <div className="absolute top-4 left-4 bg-slate-800/90 backdrop-blur-lg text-white px-4 py-2 rounded-2xl text-sm font-light shadow-xl">
+                                    Avant
+                                  </div>
+                                </div>
+                                <div className="relative">
+                                  <img 
+                                    src={case_.afterImage} 
+                                    alt={`After ${case_.title}`}
+                                    className="w-full h-full object-cover transition-transform duration-1500 group-hover:scale-110"
+                                  />
+                                  <div className="absolute top-4 right-4 bg-amber-600/90 backdrop-blur-lg text-white px-4 py-2 rounded-2xl text-sm font-light shadow-xl">
+                                    Après
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+                            </AspectRatio>
+                            <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-2xl rounded-2xl p-6 shadow-2xl border border-white/90">
+                              <div className="flex items-center justify-between mb-3">
+                                <span className="text-amber-600 font-light text-sm tracking-wide bg-amber-50/80 px-4 py-2 rounded-full">
+                                  {case_.treatment}
+                                </span>
+                                <span className="text-slate-600 font-light text-sm">
+                                  {case_.duration}
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="p-12">
+                            <h3 className="text-2xl font-light text-slate-900 mb-6 tracking-wide">{case_.title}</h3>
+                            <p className="text-slate-600 text-lg leading-relaxed font-light">
+                              {case_.description}
+                            </p>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="hidden lg:flex -left-16 w-16 h-16 bg-white/95 backdrop-blur-2xl shadow-2xl border border-white/90 hover:bg-white hover:shadow-3xl transition-all duration-700" />
+                <CarouselNext className="hidden lg:flex -right-16 w-16 h-16 bg-white/95 backdrop-blur-2xl shadow-2xl border border-white/90 hover:bg-white hover:shadow-3xl transition-all duration-700" />
+              </Carousel>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section - Ultra Luxury */}
+        <section className="py-40 bg-gradient-to-b from-zinc-50/95 via-slate-50/95 to-white/95 backdrop-blur-lg">
+          <div className="container mx-auto px-12">
+            <div className="text-center mb-32 max-w-6xl mx-auto">
+              <div className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-slate-100/90 via-zinc-50/80 to-amber-100/90 border border-slate-300/40 rounded-full shadow-2xl backdrop-blur-lg mb-10">
+                <span className="text-slate-900 font-light text-sm tracking-[0.3em] uppercase">Témoignages de Patients</span>
+              </div>
+              
+              <h2 className="text-6xl lg:text-7xl font-extralight text-slate-900 mb-10 tracking-tighter leading-tight">
+                Expériences <span className="text-slate-700 italic font-thin">Exceptionnelles</span>
+              </h2>
+              <p className="text-2xl text-slate-700 font-light leading-relaxed tracking-wide max-w-4xl mx-auto">
+                Les témoignages authentiques de nos patients qui nous font confiance
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-8xl mx-auto">
+              {testimonials.map((testimonial) => (
+                <Card key={testimonial.id} className="group hover:shadow-[0_50px_100px_rgba(0,0,0,0.15)] transition-all duration-1000 transform hover:-translate-y-6 border border-white/90 shadow-2xl bg-white/95 backdrop-blur-lg rounded-[2.5rem] overflow-hidden hover:border-amber-300/50">
+                  <CardContent className="p-12 relative">
+                    <div className="absolute top-8 right-8 w-16 h-16 bg-gradient-to-br from-amber-500/20 via-amber-600/15 to-amber-700/20 rounded-3xl flex items-center justify-center shadow-xl">
+                      <Quote className="h-8 w-8 text-amber-600" />
+                    </div>
+                    
+                    <div className="flex mb-8">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="h-6 w-6 text-amber-500 fill-current mr-1" />
+                      ))}
+                    </div>
+                    
+                    <p className="text-slate-700 text-lg mb-10 leading-relaxed font-light italic tracking-wide">
+                      "{testimonial.text}"
+                    </p>
+                    
+                    <div className="space-y-6">
+                      <div className="h-px bg-gradient-to-r from-transparent via-slate-300/50 to-transparent"></div>
+                      
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <p className="font-light text-slate-900 text-xl tracking-wide mb-2">{testimonial.name}</p>
+                          <p className="text-amber-600 font-light text-sm tracking-wide bg-amber-50/80 px-4 py-2 rounded-full inline-block">
+                            {testimonial.treatment}
+                          </p>
+                        </div>
+                        <div className="text-right">
+                          <p className="text-slate-600 font-light text-sm tracking-wide">{testimonial.location}</p>
+                          <p className="text-slate-500 font-light text-xs tracking-wide">{testimonial.date}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
         <section className="py-40 bg-gradient-to-b from-white to-slate-50">
           <div className="container mx-auto px-12">
             <div className="relative overflow-hidden">
