@@ -17,8 +17,8 @@ const Index = () => {
       id: 1,
       title: "Complete Smile Transformation",
       description: "Full mouth rehabilitation with dental implants and porcelain crowns",
-      beforeImage: "/lovable-uploads/b9d7e9c1-f823-4c10-ae29-6694c5a422db.png",
-      afterImage: "/lovable-uploads/ff81044a-e72d-416c-b466-28e4991ab4fc.png",
+      beforeImage: "/lovable-uploads/38083df9-56f4-4f02-ac01-8b4e21d015bb.png",
+      afterImage: "/lovable-uploads/38083df9-56f4-4f02-ac01-8b4e21d015bb.png",
       treatment: "Dental Implants + Crowns",
       duration: "6 months"
     },
@@ -26,8 +26,8 @@ const Index = () => {
       id: 2,
       title: "Porcelain Veneers Makeover",
       description: "Natural-looking smile enhancement with premium porcelain veneers",
-      beforeImage: "/lovable-uploads/4354423c-60c5-498f-a18a-31dde1580202.png",
-      afterImage: "/lovable-uploads/cd50fbe4-44af-47cc-902d-1f7891702636.png",
+      beforeImage: "/lovable-uploads/00d8ea99-d8c5-43e3-9228-11a1c8c5a17c.png",
+      afterImage: "/lovable-uploads/00d8ea99-d8c5-43e3-9228-11a1c8c5a17c.png",
       treatment: "Porcelain Veneers",
       duration: "3 weeks"
     },
@@ -35,8 +35,8 @@ const Index = () => {
       id: 3,
       title: "Professional Whitening Results",
       description: "Advanced teeth whitening for a brilliant, confident smile",
-      beforeImage: "/lovable-uploads/2fca1257-4c15-422b-b3ea-e2581e900e10.png",
-      afterImage: "/lovable-uploads/cd50fbe4-44af-47cc-902d-1f7891702636.png",
+      beforeImage: "/lovable-uploads/32fbd011-09a3-46eb-a20d-5b769b9b08af.png",
+      afterImage: "/lovable-uploads/32fbd011-09a3-46eb-a20d-5b769b9b08af.png",
       treatment: "Professional Whitening",
       duration: "1 session"
     }
