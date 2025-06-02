@@ -17,7 +17,7 @@ const Index = () => {
       id: 1,
       title: "Complete Smile Transformation",
       description: "Full mouth rehabilitation with dental implants and porcelain crowns",
-      beforeImage: "/lovable-uploads/fddbc98c-a481-4d7d-b176-d8b95960a6d3.png",
+      beforeImage: "/lovable-uploads/2d6f3aad-bedc-4bff-84a8-18ac44ba050e.png",
       afterImage: "/lovable-uploads/b9d7e9c1-f823-4c10-ae29-6694c5a422db.png",
       treatment: "Dental Implants + Crowns",
       duration: "6 months"
@@ -26,7 +26,7 @@ const Index = () => {
       id: 2,
       title: "Porcelain Veneers Makeover",
       description: "Natural-looking smile enhancement with premium porcelain veneers",
-      beforeImage: "/lovable-uploads/00d8ea99-d8c5-43e3-9228-11a1c8c5a17c.png",
+      beforeImage: "/lovable-uploads/cc92d20f-ab60-4255-9277-82a6b5024ea4.png",
       afterImage: "/lovable-uploads/4354423c-60c5-498f-a18a-31dde1580202.png",
       treatment: "Porcelain Veneers",
       duration: "3 weeks"
