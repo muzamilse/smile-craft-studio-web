@@ -355,13 +355,13 @@ const Index = () => {
                       <Card className="group overflow-hidden hover:shadow-[0_50px_100px_rgba(0,0,0,0.15)] transition-all duration-1000 transform hover:-translate-y-6 border border-white/90 shadow-2xl bg-white/95 backdrop-blur-lg rounded-[2.5rem]">
                         <CardContent className="p-0">
                           <div className="relative overflow-hidden">
-                            <AspectRatio ratio={16 / 12}>
-                              <div className="grid grid-cols-2 h-full">
+                            <AspectRatio ratio={16 / 9}>
+                              <div className="grid grid-cols-2 h-full gap-1">
                                 <div className="relative">
                                   <img 
                                     src={case_.beforeImage} 
                                     alt={`Before ${case_.title}`}
-                                    className="w-full h-full object-cover transition-transform duration-1500 group-hover:scale-110"
+                                    className="w-full h-full object-contain bg-white transition-transform duration-1500 group-hover:scale-105"
                                   />
                                   <div className="absolute top-4 left-4 bg-slate-800/90 backdrop-blur-lg text-white px-4 py-2 rounded-2xl text-sm font-light shadow-xl">
                                     Avant
@@ -371,14 +371,13 @@ const Index = () => {
                                   <img 
                                     src={case_.afterImage} 
                                     alt={`After ${case_.title}`}
-                                    className="w-full h-full object-cover transition-transform duration-1500 group-hover:scale-110"
+                                    className="w-full h-full object-contain bg-white transition-transform duration-1500 group-hover:scale-105"
                                   />
                                   <div className="absolute top-4 right-4 bg-amber-600/90 backdrop-blur-lg text-white px-4 py-2 rounded-2xl text-sm font-light shadow-xl">
                                     Après
                                   </div>
                                 </div>
                               </div>
-                              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
                             </AspectRatio>
                             <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-2xl rounded-2xl p-6 shadow-2xl border border-white/90">
                               <div className="flex items-center justify-between mb-3">
