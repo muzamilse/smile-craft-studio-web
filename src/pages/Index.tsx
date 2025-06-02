@@ -17,7 +17,7 @@ const Index = () => {
       id: 1,
       title: "Complete Smile Transformation",
       description: "Full mouth rehabilitation with dental implants and porcelain crowns",
-      beforeImage: "/lovable-uploads/38083df9-56f4-4f02-ac01-8b4e21d015bb.png",
+      beforeImage: "/lovable-uploads/fddbc98c-a481-4d7d-b176-d8b95960a6d3.png",
       afterImage: "/lovable-uploads/b9d7e9c1-f823-4c10-ae29-6694c5a422db.png",
       treatment: "Dental Implants + Crowns",
       duration: "6 months"
