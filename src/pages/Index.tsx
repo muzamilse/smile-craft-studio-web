@@ -331,7 +331,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Before & After Section - Ultra Luxury */}
+        {/* Before & After Section - Simplified */}
         <section className="py-40 bg-gradient-to-b from-white/95 via-slate-50/95 to-zinc-50/95 backdrop-blur-lg">
           <div className="container mx-auto px-12">
             <div className="text-center mb-32 max-w-6xl mx-auto">
@@ -347,63 +347,58 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="max-w-7xl mx-auto">
-              <Carousel className="w-full">
-                <CarouselContent className="-ml-12">
-                  {beforeAfterCases.map((case_) => (
-                    <CarouselItem key={case_.id} className="pl-12 md:basis-1/2 lg:basis-1/3">
-                      <Card className="group overflow-hidden hover:shadow-[0_50px_100px_rgba(0,0,0,0.15)] transition-all duration-1000 transform hover:-translate-y-6 border border-white/90 shadow-2xl bg-white/95 backdrop-blur-lg rounded-[2.5rem]">
-                        <CardContent className="p-0">
-                          <div className="relative overflow-hidden">
-                            <AspectRatio ratio={16 / 9}>
-                              <div className="grid grid-cols-2 h-full gap-1">
-                                <div className="relative">
-                                  <img 
-                                    src={case_.beforeImage} 
-                                    alt={`Before ${case_.title}`}
-                                    className="w-full h-full object-contain bg-white transition-transform duration-1500 group-hover:scale-105"
-                                  />
-                                  <div className="absolute top-4 left-4 bg-slate-800/90 backdrop-blur-lg text-white px-4 py-2 rounded-2xl text-sm font-light shadow-xl">
-                                    Avant
-                                  </div>
-                                </div>
-                                <div className="relative">
-                                  <img 
-                                    src={case_.afterImage} 
-                                    alt={`After ${case_.title}`}
-                                    className="w-full h-full object-contain bg-white transition-transform duration-1500 group-hover:scale-105"
-                                  />
-                                  <div className="absolute top-4 right-4 bg-amber-600/90 backdrop-blur-lg text-white px-4 py-2 rounded-2xl text-sm font-light shadow-xl">
-                                    Après
-                                  </div>
-                                </div>
-                              </div>
-                            </AspectRatio>
-                            <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-2xl rounded-2xl p-6 shadow-2xl border border-white/90">
-                              <div className="flex items-center justify-between mb-3">
-                                <span className="text-amber-600 font-light text-sm tracking-wide bg-amber-50/80 px-4 py-2 rounded-full">
-                                  {case_.treatment}
-                                </span>
-                                <span className="text-slate-600 font-light text-sm">
-                                  {case_.duration}
-                                </span>
-                              </div>
-                            </div>
+            <div className="max-w-7xl mx-auto space-y-16">
+              {beforeAfterCases.map((case_) => (
+                <Card key={case_.id} className="overflow-hidden shadow-2xl bg-white/95 backdrop-blur-lg rounded-[2.5rem] border border-white/90">
+                  <CardContent className="p-0">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                      {/* Before Image */}
+                      <div className="relative bg-slate-50">
+                        <div className="aspect-[4/3] relative">
+                          <img 
+                            src={case_.beforeImage} 
+                            alt={`Before ${case_.title}`}
+                            className="w-full h-full object-contain"
+                          />
+                          <div className="absolute top-6 left-6 bg-slate-800/90 backdrop-blur-lg text-white px-6 py-3 rounded-2xl font-light shadow-xl">
+                            <span className="text-lg">AVANT</span>
                           </div>
-                          <div className="p-12">
-                            <h3 className="text-2xl font-light text-slate-900 mb-6 tracking-wide">{case_.title}</h3>
-                            <p className="text-slate-600 text-lg leading-relaxed font-light">
-                              {case_.description}
-                            </p>
+                        </div>
+                      </div>
+
+                      {/* After Image */}
+                      <div className="relative bg-slate-50">
+                        <div className="aspect-[4/3] relative">
+                          <img 
+                            src={case_.afterImage} 
+                            alt={`After ${case_.title}`}
+                            className="w-full h-full object-contain"
+                          />
+                          <div className="absolute top-6 right-6 bg-amber-600/90 backdrop-blur-lg text-white px-6 py-3 rounded-2xl font-light shadow-xl">
+                            <span className="text-lg">APRÈS</span>
                           </div>
-                        </CardContent>
-                      </Card>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="hidden lg:flex -left-16 w-16 h-16 bg-white/95 backdrop-blur-2xl shadow-2xl border border-white/90 hover:bg-white hover:shadow-3xl transition-all duration-700" />
-                <CarouselNext className="hidden lg:flex -right-16 w-16 h-16 bg-white/95 backdrop-blur-2xl shadow-2xl border border-white/90 hover:bg-white hover:shadow-3xl transition-all duration-700" />
-              </Carousel>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Case Information */}
+                    <div className="p-12 text-center">
+                      <h3 className="text-3xl font-light text-slate-900 mb-4 tracking-wide">{case_.title}</h3>
+                      <p className="text-slate-600 text-xl mb-6 leading-relaxed font-light max-w-2xl mx-auto">
+                        {case_.description}
+                      </p>
+                      <div className="flex items-center justify-center gap-8">
+                        <span className="text-amber-600 font-light text-lg tracking-wide bg-amber-50/80 px-6 py-3 rounded-full">
+                          {case_.treatment}
+                        </span>
+                        <span className="text-slate-600 font-light text-lg">
+                          Durée: {case_.duration}
+                        </span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
