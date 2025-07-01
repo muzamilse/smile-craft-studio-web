@@ -39,14 +39,23 @@ const Index = () => {
       afterImage: "/lovable-uploads/cd50fbe4-44af-47cc-902d-1f7891702636.png",
       treatment: "Professional Whitening",
       duration: "1 session"
+    },
+    {
+      id: 4,
+      title: "Full Mouth Rehabilitation",
+      description: "Complete oral reconstruction with advanced implant technology and aesthetic restoration",
+      beforeImage: "/lovable-uploads/00601e1a-d550-4238-970b-b8e4cb9f4b0f.png",
+      afterImage: "/lovable-uploads/fddbc98c-a481-4d7d-b176-d8b95960a6d3.png",
+      treatment: "Full Mouth Rehabilitation",
+      duration: "8-12 months"
     }
   ];
 
   // AI-powered image analysis to detect before/after quality
   const analyzeImageQuality = (imagePath: string) => {
     // Simple heuristic based on filename patterns and known before/after characteristics
-    const beforeIndicators = ['2d6f3aad', 'cc92d20f', '32fbd011']; // Typically darker, more dental issues
-    const afterIndicators = ['b9d7e9c1', '4354423c', 'cd50fbe4']; // Typically brighter, improved smiles
+    const beforeIndicators = ['2d6f3aad', 'cc92d20f', '32fbd011', '00601e1a']; // Typically darker, more dental issues
+    const afterIndicators = ['b9d7e9c1', '4354423c', 'cd50fbe4', 'fddbc98c']; // Typically brighter, improved smiles
     
     const isBeforeImage = beforeIndicators.some(indicator => imagePath.includes(indicator));
     const isAfterImage = afterIndicators.some(indicator => imagePath.includes(indicator));
