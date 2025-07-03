@@ -48,6 +48,15 @@ const Index = () => {
       afterImage: "/lovable-uploads/fddbc98c-a481-4d7d-b176-d8b95960a6d3.png",
       treatment: "Full Mouth Rehabilitation",
       duration: "8-12 months"
+    },
+    {
+      id: 5,
+      title: "Complete Dental Reconstruction",
+      description: "Comprehensive full mouth rehabilitation transforming missing and damaged teeth into a perfect smile",
+      beforeImage: "/lovable-uploads/e07c1ee1-ad25-4288-979a-147e28ec4682.png",
+      afterImage: "/lovable-uploads/e07c1ee1-ad25-4288-979a-147e28ec4682.png",
+      treatment: "Full Mouth Rehabilitation",
+      duration: "10-14 months"
     }
   ];
 
