@@ -1,7 +1,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Star, Heart, MessageCircle, Share } from "lucide-react";
+import { ThumbsUp, MessageCircle, Share2, MoreHorizontal } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -10,149 +10,146 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: "Aicha Benali",
-      username: "@aicha.benali92",
       treatment: "Dental Implants",
-      rating: 5,
       text: "MashaAllah! Dr. Smith completely transformed my smile with dental implants 😍 I can't believe how natural they look and feel. The entire process was so comfortable and professional. Highly recommend! 🦷✨",
       image: "/lovable-uploads/4354423c-60c5-498f-a18a-31dde1580202.png",
-      timeAgo: "2 hours ago",
+      timeAgo: "2h",
       likes: 47,
       comments: 12,
-      platform: "instagram"
+      shares: 3,
+      hasLiked: false
     },
     {
       name: "Youssef Alaoui",
-      username: "Youssef Alaoui",
       treatment: "Smile Makeover",
-      rating: 5,
       text: "Subhan'Allah! I had veneers and whitening done, and the results exceeded my expectations 🙌 Dr. Smith is truly an artist. My confidence has skyrocketed! Thank you so much for giving me the perfect smile. Best decision ever! 😊💯",
       image: "/lovable-uploads/cd50fbe4-44af-47cc-902d-1f7891702636.png",
-      timeAgo: "1 day ago",
+      timeAgo: "1d",
       likes: 89,
       comments: 23,
-      platform: "facebook"
+      shares: 8,
+      hasLiked: true
     },
     {
       name: "Fatima Zahra Idrissi",
-      username: "@fati_zahra",
       treatment: "Porcelain Veneers",
-      rating: 5,
-      text: "Alhamdulillah! The best investment I've ever made 💎 My new smile looks so natural that people can't tell I had work done. Dr. Smith's attention to detail is incredible. I'm so grateful! 🤲✨ #SmileTransformation #Blessed",
+      text: "Alhamdulillah! The best investment I've ever made 💎 My new smile looks so natural that people can't tell I had work done. Dr. Smith's attention to detail is incredible. I'm so grateful! 🤲✨",
       image: "/lovable-uploads/b9d7e9c1-f823-4c10-ae29-6694c5a422db.png",
-      timeAgo: "3 days ago",
+      timeAgo: "3d",
       likes: 156,
       comments: 34,
-      platform: "instagram"
+      shares: 15,
+      hasLiked: false
     },
     {
       name: "Omar Berrada",
-      username: "Omar Berrada",
       treatment: "Teeth Whitening",
-      rating: 5,
       text: "Amazing experience at SmileCraft Studio! 🔥 My teeth are now several shades whiter and I feel so much more confident. The staff was incredibly professional and made me feel comfortable throughout the entire process. 10/10 would recommend to anyone looking for quality dental care! 🦷😁",
       image: "/lovable-uploads/32fbd011-09a3-46eb-a20d-5b769b9b08af.png",
-      timeAgo: "5 days ago",
+      timeAgo: "5d",
       likes: 73,
       comments: 18,
-      platform: "facebook"
+      shares: 4,
+      hasLiked: true
     },
     {
       name: "Salma Benjelloun",
-      username: "@salma_benj",
       treatment: "Full Mouth Rehabilitation",
-      rating: 5,
-      text: "La hawla wa la quwwata illa billah! What a transformation! 😱✨ After years of dental problems, Dr. Smith gave me a completely new smile. The full mouth rehabilitation was life-changing. I can eat, speak, and smile with confidence again! 🙏❤️ #NewMe #Grateful",
+      text: "La hawla wa la quwwata illa billah! What a transformation! 😱✨ After years of dental problems, Dr. Smith gave me a completely new smile. The full mouth rehabilitation was life-changing. I can eat, speak, and smile with confidence again! 🙏❤️",
       image: "/lovable-uploads/fddbc98c-a481-4d7d-b176-d8b95960a6d3.png",
-      timeAgo: "1 week ago",
+      timeAgo: "1w",
       likes: 203,
       comments: 56,
-      platform: "instagram"
+      shares: 22,
+      hasLiked: false
     },
     {
       name: "Hamza Tazi",
-      username: "Hamza Tazi",
       treatment: "Dental Implants",
-      rating: 5,
       text: "Barakallahu fik Dr. Smith! 🙏 After losing a tooth in an accident, I was so self-conscious about my smile. The dental implant procedure was smooth and the results are perfect. It feels just like my natural tooth. Professional team and excellent service! Highly recommend to everyone! 👍",
       image: "/lovable-uploads/2d6f3aad-bedc-4bff-84a8-18ac44ba050e.png",
-      timeAgo: "2 weeks ago",
+      timeAgo: "2w",
       likes: 91,
       comments: 27,
-      platform: "facebook"
+      shares: 6,
+      hasLiked: true
     }
   ];
 
-  const renderSocialMediaCard = (testimonial: any, index: number) => {
-    const isInstagram = testimonial.platform === "instagram";
-    
+  const renderFacebookComment = (testimonial: any, index: number) => {
     return (
-      <Card key={index} className={`border-none shadow-lg ${isInstagram ? 'bg-gradient-to-br from-purple-50 to-pink-50' : 'bg-blue-50'}`}>
-        <CardContent className="p-4">
-          {/* Header */}
-          <div className="flex items-center mb-3">
-            <Avatar className="h-10 w-10 mr-3">
-              <AvatarImage src={testimonial.image} alt={testimonial.name} />
-              <AvatarFallback className="bg-blue-500 text-white text-sm">
-                {testimonial.name.split(' ').map((n: string) => n[0]).join('')}
-              </AvatarFallback>
-            </Avatar>
-            <div className="flex-1">
-              <div className="flex items-center">
-                <h3 className="font-semibold text-gray-800 text-sm">{testimonial.name}</h3>
-                {isInstagram && (
-                  <span className="text-blue-500 ml-1 text-xs">✓</span>
-                )}
+      <div key={index} className="bg-white border-b border-gray-200 p-4">
+        {/* Comment Header */}
+        <div className="flex items-start space-x-3">
+          <Avatar className="h-10 w-10 flex-shrink-0">
+            <AvatarImage src={testimonial.image} alt={testimonial.name} />
+            <AvatarFallback className="bg-blue-500 text-white text-sm">
+              {testimonial.name.split(' ').map((n: string) => n[0]).join('')}
+            </AvatarFallback>
+          </Avatar>
+          
+          <div className="flex-1 min-w-0">
+            {/* Comment Content */}
+            <div className="bg-gray-100 rounded-2xl px-3 py-2 mb-1">
+              <div className="flex items-center justify-between mb-1">
+                <h3 className="font-semibold text-gray-900 text-sm">{testimonial.name}</h3>
+                <button className="text-gray-400 hover:text-gray-600">
+                  <MoreHorizontal className="h-4 w-4" />
+                </button>
               </div>
-              <p className="text-xs text-gray-500">
-                {isInstagram ? testimonial.username : testimonial.timeAgo}
-              </p>
-            </div>
-            <div className="text-xs text-gray-500">{testimonial.timeAgo}</div>
-          </div>
-
-          {/* Content */}
-          <div className="mb-4">
-            <p className="text-gray-700 text-sm leading-relaxed mb-2">{testimonial.text}</p>
-            
-            {/* Stars */}
-            <div className="flex mb-2">
-              {[...Array(testimonial.rating)].map((_, i) => (
-                <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
-              ))}
+              <p className="text-gray-800 text-sm leading-relaxed">{testimonial.text}</p>
+              <div className="mt-2 text-xs text-blue-600 font-medium">
+                Treatment: {testimonial.treatment}
+              </div>
             </div>
             
-            <div className="text-xs text-gray-500">
-              Treatment: <span className="font-medium text-blue-600">{testimonial.treatment}</span>
+            {/* Comment Meta */}
+            <div className="flex items-center space-x-4 text-xs text-gray-500 mb-2">
+              <span className="font-medium">{testimonial.timeAgo}</span>
+              <button className={`font-medium hover:underline ${testimonial.hasLiked ? 'text-blue-600' : 'text-gray-500'}`}>
+                Like
+              </button>
+              <button className="font-medium hover:underline text-gray-500">
+                Reply
+              </button>
+              <button className="font-medium hover:underline text-gray-500">
+                Share
+              </button>
             </div>
+            
+            {/* Like Count */}
+            {testimonial.likes > 0 && (
+              <div className="flex items-center space-x-1 mb-2">
+                <div className="flex items-center bg-blue-600 rounded-full p-1">
+                  <ThumbsUp className="h-3 w-3 text-white fill-current" />
+                </div>
+                <span className="text-xs text-gray-500">{testimonial.likes}</span>
+              </div>
+            )}
           </div>
-
-          {/* Social Actions */}
-          <div className="flex items-center justify-between pt-2 border-t border-gray-200">
-            <div className="flex items-center space-x-4">
-              <button className="flex items-center space-x-1 text-gray-500 hover:text-red-500 transition-colors">
-                <Heart className="h-4 w-4" />
-                <span className="text-xs">{testimonial.likes}</span>
-              </button>
-              <button className="flex items-center space-x-1 text-gray-500 hover:text-blue-500 transition-colors">
-                <MessageCircle className="h-4 w-4" />
-                <span className="text-xs">{testimonial.comments}</span>
-              </button>
-              <button className="flex items-center space-x-1 text-gray-500 hover:text-green-500 transition-colors">
-                <Share className="h-4 w-4" />
-                <span className="text-xs">Share</span>
-              </button>
-            </div>
-            <div className={`text-xs px-2 py-1 rounded-full ${isInstagram ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white' : 'bg-blue-500 text-white'}`}>
-              {isInstagram ? 'Instagram' : 'Facebook'}
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+        </div>
+        
+        {/* Action Buttons */}
+        <div className="flex items-center justify-between mt-3 pt-2 border-t border-gray-200">
+          <button className={`flex items-center space-x-2 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors ${testimonial.hasLiked ? 'text-blue-600' : 'text-gray-600'}`}>
+            <ThumbsUp className={`h-4 w-4 ${testimonial.hasLiked ? 'fill-current' : ''}`} />
+            <span className="text-sm font-medium">Like</span>
+          </button>
+          <button className="flex items-center space-x-2 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors text-gray-600">
+            <MessageCircle className="h-4 w-4" />
+            <span className="text-sm font-medium">Comment</span>
+          </button>
+          <button className="flex items-center space-x-2 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors text-gray-600">
+            <Share2 className="h-4 w-4" />
+            <span className="text-sm font-medium">Share</span>
+          </button>
+        </div>
+      </div>
     );
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-50">
       <Header />
       <WhatsAppButton />
 
@@ -163,15 +160,19 @@ const Testimonials = () => {
             What Our Patients Say
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
-            Real reviews from our satisfied patients on social media
+            Real reviews from our satisfied patients
           </p>
         </div>
       </section>
 
-      {/* Social Media Testimonials */}
+      {/* Facebook-style Comments */}
       <section className="container mx-auto px-4 py-8 sm:py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-          {testimonials.map(renderSocialMediaCard)}
+        <div className="max-w-2xl mx-auto">
+          <Card className="border-0 shadow-lg overflow-hidden">
+            <CardContent className="p-0">
+              {testimonials.map(renderFacebookComment)}
+            </CardContent>
+          </Card>
         </div>
       </section>
 
