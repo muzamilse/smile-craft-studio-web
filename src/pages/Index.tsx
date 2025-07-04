@@ -8,54 +8,6 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import BookingModal from "@/components/BookingModal";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const beforeAfterCases = [
-  {
-    id: 1,
-    title: "Complete Smile Transformation",
-    description: "Full mouth rehabilitation with dental implants and porcelain crowns",
-    beforeImage: "/lovable-uploads/2d6f3aad-bedc-4bff-84a8-18ac44ba050e.png",
-    afterImage: "/lovable-uploads/b9d7e9c1-f823-4c10-ae29-6694c5a422db.png",
-    treatment: "Dental Implants + Crowns",
-    duration: "6 months"
-  },
-  {
-    id: 2,
-    title: "Porcelain Veneers Makeover",
-    description: "Natural-looking smile enhancement with premium porcelain veneers",
-    beforeImage: "/lovable-uploads/cc92d20f-ab60-4255-9277-82a6b5024ea4.png",
-    afterImage: "/lovable-uploads/4354423c-60c5-498f-a18a-31dde1580202.png",
-    treatment: "Porcelain Veneers",
-    duration: "3 weeks"
-  },
-  {
-    id: 3,
-    title: "Professional Whitening Results",
-    description: "Advanced teeth whitening for a brilliant, confident smile",
-    beforeImage: "/lovable-uploads/32fbd011-09a3-46eb-a20d-5b769b9b08af.png",
-    afterImage: "/lovable-uploads/cd50fbe4-44af-47cc-902d-1f7891702636.png",
-    treatment: "Professional Whitening",
-    duration: "1 session"
-  },
-  {
-    id: 4,
-    title: "Full Mouth Rehabilitation",
-    description: "Complete oral reconstruction with advanced implant technology and aesthetic restoration",
-    beforeImage: "/lovable-uploads/00601e1a-d550-4238-970b-b8e4cb9f4b0f.png",
-    afterImage: "/lovable-uploads/fddbc98c-a481-4d7d-b176-d8b95960a6d3.png",
-    treatment: "Full Mouth Rehabilitation",
-    duration: "8-12 months"
-  },
-  {
-    id: 5,
-    title: "Complete Dental Reconstruction",
-    description: "Comprehensive full mouth rehabilitation transforming missing and damaged teeth into a perfect smile",
-    beforeImage: "/lovable-uploads/e07c1ee1-ad25-4288-979a-147e28ec4682.png",
-    afterImage: "/lovable-uploads/e07c1ee1-ad25-4288-979a-147e28ec4682.png",
-    treatment: "Full Mouth Rehabilitation",
-    duration: "10-14 months"
-  }
-];
-
 const testimonials = [
   {
     id: 1,
@@ -343,72 +295,6 @@ const Index = () => {
                   {t('excellence.certification.desc')}
                 </p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Before & After Section - Mobile Optimized */}
-        <section className="py-16 sm:py-24 lg:py-32 bg-gradient-to-b from-white/95 via-slate-50/95 to-zinc-50/95 backdrop-blur-lg">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-12">
-            <div className="text-center mb-12 sm:mb-16 lg:mb-24 max-w-4xl mx-auto">
-              <div className="inline-flex items-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 bg-gradient-to-r from-amber-100/90 via-gold-50/80 to-slate-100/90 border border-amber-300/40 rounded-full shadow-xl backdrop-blur-lg mb-4 sm:mb-6 lg:mb-8">
-                <span className="text-amber-900 font-light text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.2em] lg:tracking-[0.3em] uppercase">Transformations</span>
-              </div>
-              
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extralight text-slate-900 mb-4 sm:mb-6 lg:mb-8 tracking-tighter leading-tight">
-                <span className="text-slate-700 italic font-thin">Transformations</span>
-              </h2>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-slate-700 font-light leading-relaxed tracking-wide">
-                Découvrez nos transformations exceptionnelles
-              </p>
-            </div>
-
-            <div className="max-w-5xl mx-auto space-y-6 sm:space-y-8 lg:space-y-12">
-              {beforeAfterCases.map((case_) => (
-                <Card key={case_.id} className="overflow-hidden shadow-lg sm:shadow-xl bg-white/95 backdrop-blur-lg rounded-xl sm:rounded-2xl lg:rounded-3xl border border-white/90">
-                  <CardContent className="p-0">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-                      {/* Before Image */}
-                      <div className="relative bg-slate-50 order-1">
-                        <div className="aspect-[16/10] sm:aspect-[4/3] relative">
-                          <img 
-                            src={case_.beforeImage} 
-                            alt={`Before ${case_.title}`}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </div>
-
-                      {/* After Image */}
-                      <div className="relative bg-slate-50 order-2">
-                        <div className="aspect-[16/10] sm:aspect-[4/3] relative">
-                          <img 
-                            src={case_.afterImage} 
-                            alt={`After ${case_.title}`}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* Case Information - Mobile Optimized */}
-                    <div className="p-4 sm:p-6 lg:p-8 xl:p-10 text-center">
-                      <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-light text-slate-900 mb-2 sm:mb-3 lg:mb-4 tracking-wide">{case_.title}</h3>
-                      <p className="text-slate-600 text-sm sm:text-base lg:text-lg xl:text-xl mb-3 sm:mb-4 lg:mb-6 leading-relaxed font-light max-w-2xl mx-auto">
-                        {case_.description}
-                      </p>
-                      <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 lg:gap-6">
-                        <span className="text-amber-600 font-light text-xs sm:text-sm lg:text-base xl:text-lg tracking-wide bg-amber-50/80 px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full">
-                          {case_.treatment}
-                        </span>
-                        <span className="text-slate-600 font-light text-xs sm:text-sm lg:text-base xl:text-lg">
-                          Durée: {case_.duration}
-                        </span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
             </div>
           </div>
         </section>
