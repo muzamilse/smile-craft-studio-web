@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, CheckCircle, Star, Phone, Shield, Award, Users, Quote } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -59,22 +58,6 @@ const Index = () => {
       duration: "10-14 months"
     }
   ];
-
-  // AI-powered image analysis to detect before/after quality
-  const analyzeImageQuality = (imagePath: string) => {
-    // Simple heuristic based on filename patterns and known before/after characteristics
-    const beforeIndicators = ['2d6f3aad', 'cc92d20f', '32fbd011', '00601e1a']; // Typically darker, more dental issues
-    const afterIndicators = ['b9d7e9c1', '4354423c', 'cd50fbe4', 'fddbc98c']; // Typically brighter, improved smiles
-    
-    const isBeforeImage = beforeIndicators.some(indicator => imagePath.includes(indicator));
-    const isAfterImage = afterIndicators.some(indicator => imagePath.includes(indicator));
-    
-    return {
-      isBefore: isBeforeImage,
-      isAfter: isAfterImage,
-      confidence: 0.95 // High confidence for demonstration
-    };
-  };
 
   const testimonials = [
     {
@@ -369,100 +352,63 @@ const Index = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-12">
             <div className="text-center mb-12 sm:mb-16 lg:mb-24 max-w-4xl mx-auto">
               <div className="inline-flex items-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 bg-gradient-to-r from-amber-100/90 via-gold-50/80 to-slate-100/90 border border-amber-300/40 rounded-full shadow-xl backdrop-blur-lg mb-4 sm:mb-6 lg:mb-8">
-                <span className="text-amber-900 font-light text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.2em] lg:tracking-[0.3em] uppercase">AI-Powered Analysis</span>
+                <span className="text-amber-900 font-light text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.2em] lg:tracking-[0.3em] uppercase">Transformations</span>
               </div>
               
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extralight text-slate-900 mb-4 sm:mb-6 lg:mb-8 tracking-tighter leading-tight">
                 Avant & <span className="text-slate-700 italic font-thin">Après</span>
               </h2>
               <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-slate-700 font-light leading-relaxed tracking-wide">
-                Transformations détectées et analysées par IA
+                Découvrez nos transformations exceptionnelles
               </p>
             </div>
 
             <div className="max-w-5xl mx-auto space-y-6 sm:space-y-8 lg:space-y-12">
-              {beforeAfterCases.map((case_) => {
-                const beforeAnalysis = analyzeImageQuality(case_.beforeImage);
-                const afterAnalysis = analyzeImageQuality(case_.afterImage);
-                
-                return (
-                  <Card key={case_.id} className="overflow-hidden shadow-lg sm:shadow-xl bg-white/95 backdrop-blur-lg rounded-xl sm:rounded-2xl lg:rounded-3xl border border-white/90">
-                    <CardContent className="p-0">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-                        {/* Before Image */}
-                        <div className="relative bg-slate-50 order-1">
-                          <div className="aspect-[16/10] sm:aspect-[4/3] relative">
-                            <img 
-                              src={case_.beforeImage} 
-                              alt={`Before ${case_.title}`}
-                              className="w-full h-full object-cover"
-                            />
-                            <div className="absolute top-2 sm:top-3 lg:top-4 left-2 sm:left-3 lg:left-4 bg-slate-800/90 backdrop-blur-lg text-white px-2 sm:px-3 lg:px-4 py-1 sm:py-1.5 lg:py-2 rounded-md sm:rounded-lg lg:rounded-xl font-light shadow-lg">
-                              <span className="text-xs sm:text-sm lg:text-base">AVANT</span>
-                              {beforeAnalysis.isBefore && (
-                                <div className="text-[10px] sm:text-xs text-slate-300 mt-0.5 sm:mt-1">
-                                  IA: {Math.round(beforeAnalysis.confidence * 100)}% sûr
-                                </div>
-                              )}
-                            </div>
-                            <div className="absolute bottom-2 sm:bottom-3 lg:bottom-4 right-2 sm:right-3 lg:right-4 bg-red-600/80 backdrop-blur-lg text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded text-[10px] sm:text-xs lg:text-sm">
-                              Problèmes détectés
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* After Image */}
-                        <div className="relative bg-slate-50 order-2">
-                          <div className="aspect-[16/10] sm:aspect-[4/3] relative">
-                            <img 
-                              src={case_.afterImage} 
-                              alt={`After ${case_.title}`}
-                              className="w-full h-full object-cover"
-                            />
-                            <div className="absolute top-2 sm:top-3 lg:top-4 right-2 sm:right-3 lg:right-4 bg-emerald-600/90 backdrop-blur-lg text-white px-2 sm:px-3 lg:px-4 py-1 sm:py-1.5 lg:py-2 rounded-md sm:rounded-lg lg:rounded-xl font-light shadow-lg">
-                              <span className="text-xs sm:text-sm lg:text-base">APRÈS</span>
-                              {afterAnalysis.isAfter && (
-                                <div className="text-[10px] sm:text-xs text-emerald-200 mt-0.5 sm:mt-1">
-                                  IA: {Math.round(afterAnalysis.confidence * 100)}% sûr
-                                </div>
-                              )}
-                            </div>
-                            <div className="absolute bottom-2 sm:bottom-3 lg:bottom-4 right-2 sm:right-3 lg:right-4 bg-emerald-600/80 backdrop-blur-lg text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded text-[10px] sm:text-xs lg:text-sm">
-                              Amélioration détectée
-                            </div>
-                          </div>
+              {beforeAfterCases.map((case_) => (
+                <Card key={case_.id} className="overflow-hidden shadow-lg sm:shadow-xl bg-white/95 backdrop-blur-lg rounded-xl sm:rounded-2xl lg:rounded-3xl border border-white/90">
+                  <CardContent className="p-0">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+                      {/* Before Image */}
+                      <div className="relative bg-slate-50 order-1">
+                        <div className="aspect-[16/10] sm:aspect-[4/3] relative">
+                          <img 
+                            src={case_.beforeImage} 
+                            alt={`Before ${case_.title}`}
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                       </div>
-                      
-                      {/* Case Information - Mobile Optimized */}
-                      <div className="p-4 sm:p-6 lg:p-8 xl:p-10 text-center">
-                        <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-light text-slate-900 mb-2 sm:mb-3 lg:mb-4 tracking-wide">{case_.title}</h3>
-                        <p className="text-slate-600 text-sm sm:text-base lg:text-lg xl:text-xl mb-3 sm:mb-4 lg:mb-6 leading-relaxed font-light max-w-2xl mx-auto">
-                          {case_.description}
-                        </p>
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 lg:gap-6">
-                          <span className="text-amber-600 font-light text-xs sm:text-sm lg:text-base xl:text-lg tracking-wide bg-amber-50/80 px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full">
-                            {case_.treatment}
-                          </span>
-                          <span className="text-slate-600 font-light text-xs sm:text-sm lg:text-base xl:text-lg">
-                            Durée: {case_.duration}
-                          </span>
+
+                      {/* After Image */}
+                      <div className="relative bg-slate-50 order-2">
+                        <div className="aspect-[16/10] sm:aspect-[4/3] relative">
+                          <img 
+                            src={case_.afterImage} 
+                            alt={`After ${case_.title}`}
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                       </div>
-                    </CardContent>
-                  </Card>
-                );
-              })}
-            </div>
-
-            {/* AI Analysis Summary */}
-            <div className="mt-8 sm:mt-12 lg:mt-16 text-center">
-              <div className="inline-flex items-center px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 bg-gradient-to-r from-emerald-100/90 via-emerald-50/80 to-slate-100/90 border border-emerald-300/40 rounded-full shadow-xl backdrop-blur-lg">
-                <Shield className="h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5 text-emerald-700 mr-1.5 sm:mr-2 lg:mr-3" />
-                <span className="text-emerald-900 font-light text-xs sm:text-sm tracking-wide">
-                  Analyse IA vérifiant automatiquement la qualité des transformations
-                </span>
-              </div>
+                    </div>
+                    
+                    {/* Case Information - Mobile Optimized */}
+                    <div className="p-4 sm:p-6 lg:p-8 xl:p-10 text-center">
+                      <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-light text-slate-900 mb-2 sm:mb-3 lg:mb-4 tracking-wide">{case_.title}</h3>
+                      <p className="text-slate-600 text-sm sm:text-base lg:text-lg xl:text-xl mb-3 sm:mb-4 lg:mb-6 leading-relaxed font-light max-w-2xl mx-auto">
+                        {case_.description}
+                      </p>
+                      <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 lg:gap-6">
+                        <span className="text-amber-600 font-light text-xs sm:text-sm lg:text-base xl:text-lg tracking-wide bg-amber-50/80 px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 rounded-full">
+                          {case_.treatment}
+                        </span>
+                        <span className="text-slate-600 font-light text-xs sm:text-sm lg:text-base xl:text-lg">
+                          Durée: {case_.duration}
+                        </span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
