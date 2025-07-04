@@ -292,7 +292,7 @@ const Index = () => {
                   <div className="relative overflow-hidden">
                     <AspectRatio ratio={16 / 10}>
                       <img 
-                        src="/lovable-uploads/b9d7e9c1-f823-4c10-ae29-6694c5a422db.png" 
+                        src="/lovable-uploads/b9e80e27-3c67-40e0-b192-6153d8008aae.png" 
                         alt="Full Mouth Rehabilitation"
                         className="w-full h-full object-cover transition-transform duration-1500 group-hover:scale-115"
                       />
@@ -302,7 +302,7 @@ const Index = () => {
                   <div className="p-6 sm:p-8 lg:p-12">
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-light text-slate-900 mb-4 sm:mb-6 tracking-wide">{t('services.makeover')}</h3>
                     <p className="text-slate-600 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 lg:mb-10 leading-relaxed font-light">
-                      {t('services.makeover.desc')}
+                      Comprehensive prosthodontic reconstruction combining multiple treatment modalities.
                     </p>
                     <Button variant="outline" className="w-full border-2 border-slate-400/50 bg-white/60 text-slate-800 hover:bg-slate-50 hover:border-amber-400/60 transition-all duration-700 rounded-xl sm:rounded-2xl py-4 sm:py-6 lg:py-8 font-light tracking-wide text-sm sm:text-base lg:text-lg">
                       {t('services.view.details')}
