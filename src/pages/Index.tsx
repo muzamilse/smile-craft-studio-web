@@ -8,86 +8,86 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import BookingModal from "@/components/BookingModal";
 import { useLanguage } from "@/contexts/LanguageContext";
 
+const beforeAfterCases = [
+  {
+    id: 1,
+    title: "Complete Smile Transformation",
+    description: "Full mouth rehabilitation with dental implants and porcelain crowns",
+    beforeImage: "/lovable-uploads/2d6f3aad-bedc-4bff-84a8-18ac44ba050e.png",
+    afterImage: "/lovable-uploads/b9d7e9c1-f823-4c10-ae29-6694c5a422db.png",
+    treatment: "Dental Implants + Crowns",
+    duration: "6 months"
+  },
+  {
+    id: 2,
+    title: "Porcelain Veneers Makeover",
+    description: "Natural-looking smile enhancement with premium porcelain veneers",
+    beforeImage: "/lovable-uploads/cc92d20f-ab60-4255-9277-82a6b5024ea4.png",
+    afterImage: "/lovable-uploads/4354423c-60c5-498f-a18a-31dde1580202.png",
+    treatment: "Porcelain Veneers",
+    duration: "3 weeks"
+  },
+  {
+    id: 3,
+    title: "Professional Whitening Results",
+    description: "Advanced teeth whitening for a brilliant, confident smile",
+    beforeImage: "/lovable-uploads/32fbd011-09a3-46eb-a20d-5b769b9b08af.png",
+    afterImage: "/lovable-uploads/cd50fbe4-44af-47cc-902d-1f7891702636.png",
+    treatment: "Professional Whitening",
+    duration: "1 session"
+  },
+  {
+    id: 4,
+    title: "Full Mouth Rehabilitation",
+    description: "Complete oral reconstruction with advanced implant technology and aesthetic restoration",
+    beforeImage: "/lovable-uploads/00601e1a-d550-4238-970b-b8e4cb9f4b0f.png",
+    afterImage: "/lovable-uploads/fddbc98c-a481-4d7d-b176-d8b95960a6d3.png",
+    treatment: "Full Mouth Rehabilitation",
+    duration: "8-12 months"
+  },
+  {
+    id: 5,
+    title: "Complete Dental Reconstruction",
+    description: "Comprehensive full mouth rehabilitation transforming missing and damaged teeth into a perfect smile",
+    beforeImage: "/lovable-uploads/e07c1ee1-ad25-4288-979a-147e28ec4682.png",
+    afterImage: "/lovable-uploads/e07c1ee1-ad25-4288-979a-147e28ec4682.png",
+    treatment: "Full Mouth Rehabilitation",
+    duration: "10-14 months"
+  }
+];
+
+const testimonials = [
+  {
+    id: 1,
+    name: "Sophie Martineau",
+    treatment: "Implants Dentaires",
+    rating: 5,
+    text: "Une transformation complète de mon sourire. L'équipe est exceptionnelle et les résultats dépassent toutes mes attentes. Je recommande vivement.",
+    location: "Paris, France",
+    date: "Novembre 2024"
+  },
+  {
+    id: 2,
+    name: "Jean-Claude Dubois", 
+    treatment: "Facettes en Porcelaine",
+    rating: 5,
+    text: "Un travail d'artiste ! Mes nouvelles facettes sont si naturelles que personne ne peut deviner que j'ai eu un traitement. Service impeccable.",
+    location: "Lyon, France",
+    date: "Octobre 2024"
+  },
+  {
+    id: 3,
+    name: "Marie-Élise Laurent",
+    treatment: "Blanchiment Professionnel", 
+    rating: 5,
+    text: "Résultats extraordinaires en une seule séance. Mon sourire n'a jamais été aussi éclatant. Une expérience de luxe du début à la fin.",
+    location: "Marseille, France",
+    date: "Septembre 2024"
+  }
+];
+
 const Index = () => {
   const { t } = useLanguage();
-
-  const beforeAfterCases = [
-    {
-      id: 1,
-      title: "Complete Smile Transformation",
-      description: "Full mouth rehabilitation with dental implants and porcelain crowns",
-      beforeImage: "/lovable-uploads/2d6f3aad-bedc-4bff-84a8-18ac44ba050e.png",
-      afterImage: "/lovable-uploads/b9d7e9c1-f823-4c10-ae29-6694c5a422db.png",
-      treatment: "Dental Implants + Crowns",
-      duration: "6 months"
-    },
-    {
-      id: 2,
-      title: "Porcelain Veneers Makeover",
-      description: "Natural-looking smile enhancement with premium porcelain veneers",
-      beforeImage: "/lovable-uploads/cc92d20f-ab60-4255-9277-82a6b5024ea4.png",
-      afterImage: "/lovable-uploads/4354423c-60c5-498f-a18a-31dde1580202.png",
-      treatment: "Porcelain Veneers",
-      duration: "3 weeks"
-    },
-    {
-      id: 3,
-      title: "Professional Whitening Results",
-      description: "Advanced teeth whitening for a brilliant, confident smile",
-      beforeImage: "/lovable-uploads/32fbd011-09a3-46eb-a20d-5b769b9b08af.png",
-      afterImage: "/lovable-uploads/cd50fbe4-44af-47cc-902d-1f7891702636.png",
-      treatment: "Professional Whitening",
-      duration: "1 session"
-    },
-    {
-      id: 4,
-      title: "Full Mouth Rehabilitation",
-      description: "Complete oral reconstruction with advanced implant technology and aesthetic restoration",
-      beforeImage: "/lovable-uploads/00601e1a-d550-4238-970b-b8e4cb9f4b0f.png",
-      afterImage: "/lovable-uploads/fddbc98c-a481-4d7d-b176-d8b95960a6d3.png",
-      treatment: "Full Mouth Rehabilitation",
-      duration: "8-12 months"
-    },
-    {
-      id: 5,
-      title: "Complete Dental Reconstruction",
-      description: "Comprehensive full mouth rehabilitation transforming missing and damaged teeth into a perfect smile",
-      beforeImage: "/lovable-uploads/e07c1ee1-ad25-4288-979a-147e28ec4682.png",
-      afterImage: "/lovable-uploads/e07c1ee1-ad25-4288-979a-147e28ec4682.png",
-      treatment: "Full Mouth Rehabilitation",
-      duration: "10-14 months"
-    }
-  ];
-
-  const testimonials = [
-    {
-      id: 1,
-      name: "Sophie Martineau",
-      treatment: "Implants Dentaires",
-      rating: 5,
-      text: "Une transformation complète de mon sourire. L'équipe est exceptionnelle et les résultats dépassent toutes mes attentes. Je recommande vivement.",
-      location: "Paris, France",
-      date: "Novembre 2024"
-    },
-    {
-      id: 2,
-      name: "Jean-Claude Dubois", 
-      treatment: "Facettes en Porcelaine",
-      rating: 5,
-      text: "Un travail d'artiste ! Mes nouvelles facettes sont si naturelles que personne ne peut deviner que j'ai eu un traitement. Service impeccable.",
-      location: "Lyon, France",
-      date: "Octobre 2024"
-    },
-    {
-      id: 3,
-      name: "Marie-Élise Laurent",
-      treatment: "Blanchiment Professionnel", 
-      rating: 5,
-      text: "Résultats extraordinaires en une seule séance. Mon sourire n'a jamais été aussi éclatant. Une expérience de luxe du début à la fin.",
-      location: "Marseille, France",
-      date: "Septembre 2024"
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-zinc-50 to-stone-50 relative overflow-hidden">
@@ -356,7 +356,7 @@ const Index = () => {
               </div>
               
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extralight text-slate-900 mb-4 sm:mb-6 lg:mb-8 tracking-tighter leading-tight">
-                Avant & <span className="text-slate-700 italic font-thin">Après</span>
+                <span className="text-slate-700 italic font-thin">Transformations</span>
               </h2>
               <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-slate-700 font-light leading-relaxed tracking-wide">
                 Découvrez nos transformations exceptionnelles
