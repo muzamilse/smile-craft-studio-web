@@ -111,8 +111,8 @@ const Index = () => {
               <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl lg:rounded-[3rem] shadow-[0_30px_60px_rgba(0,0,0,0.12)] sm:shadow-[0_40px_80px_rgba(0,0,0,0.15)] lg:shadow-[0_50px_100px_rgba(0,0,0,0.15)] border border-white/60 backdrop-blur-lg">
                 <AspectRatio ratio={4 / 3}>
                   <img 
-                    src="/lovable-uploads/a3a261c1-5250-4a13-8d21-f3860d297dcb.png" 
-                    alt="Advanced dental surgery with microscope and modern equipment in sterile clinical environment"
+                    src="/lovable-uploads/a349b8ac-3757-463e-a8fb-7433f51b2d65.png" 
+                    alt="Dr. Mourad Garin in his modern dental clinic with certifications and advanced dental technology"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
