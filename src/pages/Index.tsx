@@ -118,14 +118,36 @@ const Index = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
                 </AspectRatio>
               </div>
-              <div className="absolute -bottom-8 sm:-bottom-12 lg:-bottom-16 -left-4 sm:-left-8 lg:-left-12 bg-white/95 backdrop-blur-2xl rounded-xl sm:rounded-2xl lg:rounded-[2.5rem] shadow-[0_20px_40px_rgba(0,0,0,0.08)] sm:shadow-[0_30px_60px_rgba(0,0,0,0.10)] lg:shadow-[0_40px_80px_rgba(0,0,0,0.12)] p-4 sm:p-6 lg:p-12 max-w-[280px] sm:max-w-sm border border-white/90">
-                <div className="flex items-center space-x-4 sm:space-x-6 lg:space-x-8">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-amber-500 via-amber-600 to-amber-700 rounded-xl sm:rounded-2xl lg:rounded-3xl flex items-center justify-center shadow-2xl">
-                    <CheckCircle className="h-6 w-6 sm:h-8 sm:w-8 lg:h-11 lg:w-11 text-white" />
+              
+              {/* Enhanced Sterile Protocol Badge with Star Rating */}
+              <div className="absolute -bottom-8 sm:-bottom-12 lg:-bottom-16 -left-4 sm:-left-8 lg:-left-12 bg-white/95 backdrop-blur-2xl rounded-xl sm:rounded-2xl lg:rounded-[2.5rem] shadow-[0_20px_40px_rgba(0,0,0,0.08)] sm:shadow-[0_30px_60px_rgba(0,0,0,0.10)] lg:shadow-[0_40px_80px_rgba(0,0,0,0.12)] p-4 sm:p-6 lg:p-12 max-w-[320px] sm:max-w-md border border-white/90">
+                <div className="space-y-4 sm:space-y-6">
+                  <div className="flex items-center space-x-4 sm:space-x-6 lg:space-x-8">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-amber-500 via-amber-600 to-amber-700 rounded-xl sm:rounded-2xl lg:rounded-3xl flex items-center justify-center shadow-2xl">
+                      <CheckCircle className="h-6 w-6 sm:h-8 sm:w-8 lg:h-11 lg:w-11 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-light text-slate-900 text-sm sm:text-lg lg:text-2xl tracking-wide mb-1">Sterile Protocol</p>
+                      <p className="text-slate-600 font-light tracking-wide text-xs sm:text-sm lg:text-lg">Hospital-grade safety standards</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-light text-slate-900 text-sm sm:text-lg lg:text-2xl tracking-wide">{t('hero.badge.sterile')}</p>
-                    <p className="text-slate-600 font-light tracking-wide text-xs sm:text-sm lg:text-lg">{t('hero.badge.safety')}</p>
+                  
+                  {/* Star Rating Section */}
+                  <div className="flex flex-col space-y-2 sm:space-y-3">
+                    <div className="flex items-center space-x-2">
+                      <div className="flex">
+                        {[...Array(4)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 text-amber-500 fill-current" />
+                        ))}
+                        <Star className="h-4 w-4 sm:h-5 sm:w-5 text-amber-500 fill-current" style={{ clipPath: 'polygon(0 0, 50% 0, 50% 100%, 0% 100%)' }} />
+                      </div>
+                      <span className="text-slate-700 font-medium text-sm sm:text-base">4.5</span>
+                    </div>
+                    <div className="inline-block">
+                      <span className="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-medium tracking-wide shadow-lg">
+                        BEST IN AGADIR
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
