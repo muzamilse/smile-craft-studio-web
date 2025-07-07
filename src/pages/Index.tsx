@@ -250,8 +250,8 @@ const Index = () => {
                   <div className="relative overflow-hidden">
                     <AspectRatio ratio={16 / 10}>
                       <img 
-                        src="/lovable-uploads/b9e80e27-3c67-40e0-b192-6153d8008aae.png" 
-                        alt="Full Mouth Rehabilitation"
+                        src="/lovable-uploads/df9cc25c-4666-48f4-8fc0-fcb208a18eb2.png" 
+                        alt="Full Mouth Rehabilitation - Before and After"
                         className="w-full h-full object-cover transition-transform duration-1500 group-hover:scale-115"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
