@@ -1,4 +1,3 @@
-
 import { Phone, MessageCircle, Facebook, Instagram, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -52,9 +51,8 @@ const Footer = () => {
               <div className="flex items-start space-x-2">
                 <MapPin className="h-3 w-3 sm:h-4 sm:w-4 mt-0.5 flex-shrink-0 text-yellow-400" />
                 <div>
-                  <p>Boulevard des FAR</p>
-                  <p>Casablanca 20000</p>
-                  <p>Morocco</p>
+                  <p>Cabinet Dentaire Spécialisé</p>
+                  <p>Agadir, Morocco</p>
                 </div>
               </div>
             </div>
