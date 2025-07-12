@@ -1,4 +1,3 @@
-
 import { Phone, Calendar, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
@@ -19,8 +18,12 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 py-4 sm:py-6 lg:py-10 relative z-10">
         <div className="flex items-center justify-between max-w-8xl mx-auto">
           <Link to="/" className="flex items-center space-x-3 sm:space-x-4 lg:space-x-8 hover:opacity-95 transition-all duration-700 group">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-24 lg:h-24 gold-gradient rounded-xl sm:rounded-2xl lg:rounded-3xl flex items-center justify-center shadow-2xl group-hover:shadow-[0_30px_60px_rgba(212,175,55,0.4)] transition-all duration-1000 transform group-hover:scale-105 luxury-glow">
-              <span className="text-black font-light text-lg sm:text-2xl lg:text-4xl tracking-wider">D</span>
+            <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-24 lg:h-24 rounded-xl sm:rounded-2xl lg:rounded-3xl flex items-center justify-center shadow-2xl group-hover:shadow-[0_30px_60px_rgba(212,175,55,0.4)] transition-all duration-1000 transform group-hover:scale-105 luxury-glow overflow-hidden bg-white">
+              <img 
+                src="/lovable-uploads/eb28a277-1b9b-477c-8254-afb4019c4ae7.png" 
+                alt="Dr Mourad Gamani Dental Clinic Logo"
+                className="w-full h-full object-contain p-1"
+              />
             </div>
             <div className="min-w-0">
               <h1 className="text-lg sm:text-2xl lg:text-4xl font-extralight text-yellow-300 tracking-tight truncate luxury-text-gradient">Dr Mourad Gamani</h1>
