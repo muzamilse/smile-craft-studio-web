@@ -1,3 +1,4 @@
+
 import { Phone, Calendar, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
@@ -20,7 +21,7 @@ const Header = () => {
           <Link to="/" className="flex items-center space-x-3 sm:space-x-4 lg:space-x-8 hover:opacity-95 transition-all duration-700 group">
             <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-24 lg:h-24 rounded-xl sm:rounded-2xl lg:rounded-3xl flex items-center justify-center shadow-2xl group-hover:shadow-[0_30px_60px_rgba(212,175,55,0.4)] transition-all duration-1000 transform group-hover:scale-105 luxury-glow overflow-hidden bg-white">
               <img 
-                src="/lovable-uploads/eb28a277-1b9b-477c-8254-afb4019c4ae7.png" 
+                src="/lovable-uploads/e8af8297-0467-4e04-b16c-180abc2d02fc.png" 
                 alt="Dr Mourad Gamani Dental Clinic Logo"
                 className="w-full h-full object-contain p-1"
               />
