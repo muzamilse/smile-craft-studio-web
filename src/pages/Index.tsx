@@ -120,35 +120,55 @@ const Index = () => {
                 </AspectRatio>
               </div>
               
-              {/* Enhanced Sterile Protocol Badge with Star Rating */}
-              <div className="absolute -bottom-8 sm:-bottom-12 lg:-bottom-16 -left-4 sm:-left-8 lg:-left-12 bg-black/95 backdrop-blur-2xl rounded-xl sm:rounded-2xl lg:rounded-[2.5rem] shadow-[0_20px_40px_rgba(212,175,55,0.2)] sm:shadow-[0_30px_60px_rgba(212,175,55,0.3)] lg:shadow-[0_40px_80px_rgba(212,175,55,0.3)] p-4 sm:p-6 lg:p-12 max-w-[320px] sm:max-w-md border border-yellow-500/60 luxury-glow">
-                <div className="space-y-4 sm:space-y-6">
-                  <div className="flex items-center space-x-4 sm:space-x-6 lg:space-x-8">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 gold-gradient rounded-xl sm:rounded-2xl lg:rounded-3xl flex items-center justify-center shadow-2xl luxury-glow">
-                      <CheckCircle className="h-6 w-6 sm:h-8 sm:w-8 lg:h-11 lg:w-11 text-black" />
+              {/* Enhanced Professional Sterile Protocol Badge */}
+              <div className="absolute -bottom-8 sm:-bottom-12 lg:-bottom-16 -left-4 sm:-left-8 lg:-left-12 bg-gradient-to-br from-black/98 via-gray-900/98 to-black/98 backdrop-blur-3xl rounded-2xl sm:rounded-3xl lg:rounded-[3rem] shadow-[0_25px_50px_rgba(0,0,0,0.6)] sm:shadow-[0_35px_70px_rgba(0,0,0,0.7)] lg:shadow-[0_45px_90px_rgba(0,0,0,0.8)] p-6 sm:p-8 lg:p-12 max-w-[350px] sm:max-w-[400px] border border-yellow-500/70 luxury-glow">
+                <div className="space-y-6 sm:space-y-8">
+                  {/* Header Section */}
+                  <div className="text-center">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 mx-auto mb-4 sm:mb-6 gold-gradient rounded-2xl sm:rounded-3xl lg:rounded-[2rem] flex items-center justify-center shadow-2xl luxury-glow">
+                      <Shield className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-black" />
                     </div>
-                    <div className="flex-1">
-                      <p className="font-light text-yellow-300 text-sm sm:text-lg lg:text-2xl tracking-wide mb-1">Sterile Protocol</p>
-                      <p className="text-yellow-200 font-light tracking-wide text-xs sm:text-sm lg:text-lg">Hospital-grade safety standards</p>
+                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-light text-yellow-300 mb-2 sm:mb-3 tracking-wide">Sterile Protocol</h3>
+                    <p className="text-yellow-200/90 text-sm sm:text-base lg:text-lg font-light leading-relaxed tracking-wide">Hospital-grade safety standards</p>
+                  </div>
+                  
+                  {/* Divider */}
+                  <div className="relative">
+                    <div className="absolute inset-0 flex items-center">
+                      <div className="w-full border-t border-gradient-to-r from-transparent via-yellow-500/40 to-transparent"></div>
+                    </div>
+                    <div className="relative flex justify-center">
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full shadow-lg luxury-glow"></div>
                     </div>
                   </div>
                   
-                  {/* Star Rating Section */}
-                  <div className="flex flex-col space-y-2 sm:space-y-3">
-                    <div className="flex items-center space-x-2">
-                      <div className="flex">
+                  {/* Rating Section */}
+                  <div className="text-center space-y-4 sm:space-y-5">
+                    <div className="flex justify-center items-center space-x-2">
+                      <div className="flex items-center">
                         {[...Array(4)].map((_, i) => (
-                          <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current" />
+                          <Star key={i} className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-400 fill-current drop-shadow-lg" />
                         ))}
-                        <Star className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current" style={{ clipPath: 'polygon(0 0, 50% 0, 50% 100%, 0% 100%)' }} />
+                        <div className="relative">
+                          <Star className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-400/30" />
+                          <div className="absolute inset-0 overflow-hidden" style={{ width: '50%' }}>
+                            <Star className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-400 fill-current drop-shadow-lg" />
+                          </div>
+                        </div>
                       </div>
-                      <span className="text-yellow-300 font-medium text-sm sm:text-base">4.5</span>
+                      <span className="text-2xl sm:text-3xl font-light text-yellow-300 ml-3 tracking-wide">4.5</span>
                     </div>
-                    <div className="inline-block">
-                      <span className="gold-gradient text-black px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-medium tracking-wide shadow-lg luxury-glow">
-                        BEST IN AGADIR
-                      </span>
+                    
+                    <div className="inline-flex items-center justify-center">
+                      <div className="gold-gradient text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-xl luxury-glow">
+                        <span className="text-sm sm:text-base font-medium tracking-[0.1em] uppercase">Best in Agadir</span>
+                      </div>
                     </div>
+                  </div>
+                  
+                  {/* Bottom accent */}
+                  <div className="flex justify-center">
+                    <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-yellow-400 to-transparent rounded-full shadow-lg luxury-glow"></div>
                   </div>
                 </div>
               </div>
