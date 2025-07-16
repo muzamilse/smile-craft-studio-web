@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, CheckCircle, Star, Phone, Shield, Award, Users, Quote } from "lucide-react";
@@ -120,55 +119,69 @@ const Index = () => {
                 </AspectRatio>
               </div>
               
-              {/* Enhanced Professional Sterile Protocol Badge */}
-              <div className="absolute -bottom-8 sm:-bottom-12 lg:-bottom-16 -left-4 sm:-left-8 lg:-left-12 bg-gradient-to-br from-black/98 via-gray-900/98 to-black/98 backdrop-blur-3xl rounded-2xl sm:rounded-3xl lg:rounded-[3rem] shadow-[0_25px_50px_rgba(0,0,0,0.6)] sm:shadow-[0_35px_70px_rgba(0,0,0,0.7)] lg:shadow-[0_45px_90px_rgba(0,0,0,0.8)] p-6 sm:p-8 lg:p-12 max-w-[350px] sm:max-w-[400px] border border-yellow-500/70 luxury-glow">
-                <div className="space-y-6 sm:space-y-8">
-                  {/* Header Section */}
-                  <div className="text-center">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 mx-auto mb-4 sm:mb-6 gold-gradient rounded-2xl sm:rounded-3xl lg:rounded-[2rem] flex items-center justify-center shadow-2xl luxury-glow">
-                      <Shield className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-black" />
+              {/* Enhanced Ultra-Professional Sterile Protocol Badge */}
+              <div className="absolute -bottom-6 sm:-bottom-8 lg:-bottom-10 -left-6 sm:-left-8 lg:-left-10 bg-gradient-to-br from-slate-950/98 via-gray-950/98 to-black/98 backdrop-blur-3xl rounded-3xl sm:rounded-[2rem] lg:rounded-[2.5rem] shadow-[0_40px_80px_rgba(0,0,0,0.8)] border border-yellow-500/40 luxury-glow p-6 sm:p-8 lg:p-10 max-w-[280px] sm:max-w-[320px] lg:max-w-[360px]">
+                <div className="space-y-4 sm:space-y-5 lg:space-y-6">
+                  {/* Premium Header Section */}
+                  <div className="text-center space-y-3 sm:space-y-4">
+                    <div className="relative mx-auto w-14 h-14 sm:w-16 sm:h-16 lg:w-18 lg:h-18">
+                      <div className="absolute inset-0 gold-gradient rounded-2xl sm:rounded-3xl shadow-2xl luxury-glow"></div>
+                      <div className="relative w-full h-full rounded-2xl sm:rounded-3xl bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center transform hover:scale-105 transition-transform duration-500">
+                        <Shield className="h-7 w-7 sm:h-8 sm:w-8 lg:h-9 lg:w-9 text-black drop-shadow-lg" />
+                      </div>
                     </div>
-                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-light text-yellow-300 mb-2 sm:mb-3 tracking-wide">Sterile Protocol</h3>
-                    <p className="text-yellow-200/90 text-sm sm:text-base lg:text-lg font-light leading-relaxed tracking-wide">Hospital-grade safety standards</p>
+                    
+                    <div className="space-y-1 sm:space-y-2">
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-yellow-300 tracking-wide">
+                        Sterile Protocol
+                      </h3>
+                      <p className="text-yellow-200/90 text-xs sm:text-sm lg:text-base font-light leading-relaxed">
+                        Hospital-grade safety standards
+                      </p>
+                    </div>
                   </div>
                   
-                  {/* Divider */}
-                  <div className="relative">
+                  {/* Elegant Divider */}
+                  <div className="relative py-2 sm:py-3">
                     <div className="absolute inset-0 flex items-center">
-                      <div className="w-full border-t border-gradient-to-r from-transparent via-yellow-500/40 to-transparent"></div>
+                      <div className="w-full h-px bg-gradient-to-r from-transparent via-yellow-500/60 to-transparent"></div>
                     </div>
                     <div className="relative flex justify-center">
-                      <div className="w-2 h-2 bg-yellow-400 rounded-full shadow-lg luxury-glow"></div>
+                      <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full shadow-lg luxury-glow"></div>
                     </div>
                   </div>
                   
-                  {/* Rating Section */}
-                  <div className="text-center space-y-4 sm:space-y-5">
-                    <div className="flex justify-center items-center space-x-2">
-                      <div className="flex items-center">
-                        {[...Array(4)].map((_, i) => (
-                          <Star key={i} className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-400 fill-current drop-shadow-lg" />
+                  {/* Professional Rating Display */}
+                  <div className="text-center space-y-3 sm:space-y-4">
+                    <div className="flex justify-center items-center space-x-2 sm:space-x-3">
+                      <div className="flex items-center space-x-1">
+                        {[1, 2, 3, 4].map((star) => (
+                          <Star key={star} className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current drop-shadow-md" />
                         ))}
                         <div className="relative">
-                          <Star className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-400/30" />
-                          <div className="absolute inset-0 overflow-hidden" style={{ width: '50%' }}>
-                            <Star className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-400 fill-current drop-shadow-lg" />
+                          <Star className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400/30" />
+                          <div className="absolute inset-0 overflow-hidden w-1/2">
+                            <Star className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current drop-shadow-md" />
                           </div>
                         </div>
                       </div>
-                      <span className="text-2xl sm:text-3xl font-light text-yellow-300 ml-3 tracking-wide">4.5</span>
+                      <span className="text-xl sm:text-2xl lg:text-3xl font-light text-yellow-300 tracking-wide">
+                        4.5
+                      </span>
                     </div>
                     
                     <div className="inline-flex items-center justify-center">
-                      <div className="gold-gradient text-black px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-xl luxury-glow">
-                        <span className="text-sm sm:text-base font-medium tracking-[0.1em] uppercase">Best in Agadir</span>
+                      <div className="gold-gradient px-4 sm:px-5 lg:px-6 py-2 sm:py-2.5 lg:py-3 rounded-full shadow-2xl luxury-glow border border-yellow-500/30">
+                        <span className="text-black text-xs sm:text-sm lg:text-base font-semibold tracking-[0.1em] uppercase">
+                          Best in Agadir
+                        </span>
                       </div>
                     </div>
                   </div>
                   
-                  {/* Bottom accent */}
-                  <div className="flex justify-center">
-                    <div className="w-12 h-0.5 bg-gradient-to-r from-transparent via-yellow-400 to-transparent rounded-full shadow-lg luxury-glow"></div>
+                  {/* Subtle Bottom Accent */}
+                  <div className="flex justify-center pt-2 sm:pt-3">
+                    <div className="w-8 sm:w-10 lg:w-12 h-0.5 bg-gradient-to-r from-transparent via-yellow-400/80 to-transparent rounded-full shadow-md luxury-glow"></div>
                   </div>
                 </div>
               </div>
