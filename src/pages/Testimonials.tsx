@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ThumbsUp, MessageCircle, Share2, MoreHorizontal } from "lucide-react";
@@ -20,7 +19,7 @@ const Testimonials = () => {
       hasLiked: false
     },
     {
-      name: "Youssef Alaoui",
+      name: "Youssef El Moutaouakil",
       treatment: "Smile Makeover",
       text: "Subhan'Allah! I had veneers and whitening done, and the results exceeded my expectations 🙌 Dr. Smith is truly an artist. My confidence has skyrocketed! Thank you so much for giving me the perfect smile. Best decision ever! 😊💯",
       image: "/lovable-uploads/cd50fbe4-44af-47cc-902d-1f7891702636.png",
@@ -31,7 +30,7 @@ const Testimonials = () => {
       hasLiked: true
     },
     {
-      name: "Fatima Zahra Idrissi",
+      name: "Khadija Benjelloun",
       treatment: "Porcelain Veneers",
       text: "Alhamdulillah! The best investment I've ever made 💎 My new smile looks so natural that people can't tell I had work done. Dr. Smith's attention to detail is incredible. I'm so grateful! 🤲✨",
       image: "/lovable-uploads/b9d7e9c1-f823-4c10-ae29-6694c5a422db.png",
@@ -42,7 +41,7 @@ const Testimonials = () => {
       hasLiked: false
     },
     {
-      name: "Omar Berrada",
+      name: "Omar Rachidi",
       treatment: "Teeth Whitening",
       text: "Amazing experience at SmileCraft Studio! 🔥 My teeth are now several shades whiter and I feel so much more confident. The staff was incredibly professional and made me feel comfortable throughout the entire process. 10/10 would recommend to anyone looking for quality dental care! 🦷😁",
       image: "/lovable-uploads/32fbd011-09a3-46eb-a20d-5b769b9b08af.png",
@@ -53,7 +52,7 @@ const Testimonials = () => {
       hasLiked: true
     },
     {
-      name: "Salma Benjelloun",
+      name: "Salma Cherkaoui",
       treatment: "Full Mouth Rehabilitation",
       text: "La hawla wa la quwwata illa billah! What a transformation! 😱✨ After years of dental problems, Dr. Smith gave me a completely new smile. The full mouth rehabilitation was life-changing. I can eat, speak, and smile with confidence again! 🙏❤️",
       image: "/lovable-uploads/fddbc98c-a481-4d7d-b176-d8b95960a6d3.png",
@@ -64,7 +63,7 @@ const Testimonials = () => {
       hasLiked: false
     },
     {
-      name: "Hamza Tazi",
+      name: "Hassan Alami",
       treatment: "Dental Implants",
       text: "Barakallahu fik Dr. Smith! 🙏 After losing a tooth in an accident, I was so self-conscious about my smile. The dental implant procedure was smooth and the results are perfect. It feels just like my natural tooth. Professional team and excellent service! Highly recommend to everyone! 👍",
       image: "/lovable-uploads/2d6f3aad-bedc-4bff-84a8-18ac44ba050e.png",
