@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, CheckCircle, Star, Phone, Shield, Award, Users, Quote } from "lucide-react";
@@ -24,7 +25,7 @@ const testimonials = [
     treatment: "Facettes en Porcelaine",
     rating: 5,
     text: "Un travail d'artiste ! Mes nouvelles facettes sont si naturelles que personne ne peut deviner que j'ai eu un traitement. Service impeccable.",
-    location: "Casablanca, Morocco",
+    location: "Agadir, Morocco",
     date: "Octobre 2024"
   },
   {
@@ -32,8 +33,8 @@ const testimonials = [
     name: "Khadija Benjelloun",
     treatment: "Blanchiment Professionnel", 
     rating: 5,
-    text: "Résultats extraordinaires en une seule séance. Mon sourire n'a jamais été aussi éclatant. Une expérience de luxe du début à la fin.",
-    location: "Marrakech, Morocco",
+    text: "Résultats extraordinaires en une séance. Mon sourire n'a jamais été aussi éclatant. Une expérience de luxe du début à la fin.",
+    location: "Agadir, Morocco",
     date: "Septembre 2024"
   }
 ];
