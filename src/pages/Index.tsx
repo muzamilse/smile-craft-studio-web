@@ -11,29 +11,29 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const testimonials = [
   {
     id: 1,
-    name: "Sophie Martineau",
+    name: "Aicha Benali",
     treatment: "Implants Dentaires",
     rating: 5,
     text: "Une transformation complète de mon sourire. L'équipe est exceptionnelle et les résultats dépassent toutes mes attentes. Je recommande vivement.",
-    location: "Paris, France",
+    location: "Agadir, Morocco",
     date: "Novembre 2024"
   },
   {
     id: 2,
-    name: "Jean-Claude Dubois", 
+    name: "Youssef El Moutaouakil", 
     treatment: "Facettes en Porcelaine",
     rating: 5,
     text: "Un travail d'artiste ! Mes nouvelles facettes sont si naturelles que personne ne peut deviner que j'ai eu un traitement. Service impeccable.",
-    location: "Lyon, France",
+    location: "Casablanca, Morocco",
     date: "Octobre 2024"
   },
   {
     id: 3,
-    name: "Marie-Élise Laurent",
+    name: "Khadija Benjelloun",
     treatment: "Blanchiment Professionnel", 
     rating: 5,
     text: "Résultats extraordinaires en une seule séance. Mon sourire n'a jamais été aussi éclatant. Une expérience de luxe du début à la fin.",
-    location: "Marseille, France",
+    location: "Marrakech, Morocco",
     date: "Septembre 2024"
   }
 ];
