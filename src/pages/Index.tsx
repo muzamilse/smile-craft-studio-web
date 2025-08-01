@@ -120,20 +120,20 @@ const Index = () => {
                 </AspectRatio>
               </div>
               
-              {/* Enhanced Ultra-Professional Sterile Protocol Badge */}
-              <div className="absolute -bottom-6 sm:-bottom-8 lg:-bottom-10 -left-6 sm:-left-8 lg:-left-10 bg-gradient-to-br from-slate-950/98 via-gray-950/98 to-black/98 backdrop-blur-3xl rounded-3xl sm:rounded-[2rem] lg:rounded-[2.5rem] shadow-[0_40px_80px_rgba(0,0,0,0.8)] border border-yellow-500/40 luxury-glow p-6 sm:p-8 lg:p-10 max-w-[280px] sm:max-w-[320px] lg:max-w-[360px]">
-                <div className="space-y-4 sm:space-y-5 lg:space-y-6">
+              {/* Enhanced Ultra-Professional Sterile Protocol Badge - Mobile Optimized */}
+              <div className="absolute -bottom-4 sm:-bottom-6 lg:-bottom-10 -left-2 sm:-left-6 lg:-left-10 bg-gradient-to-br from-slate-950/98 via-gray-950/98 to-black/98 backdrop-blur-3xl rounded-2xl sm:rounded-3xl lg:rounded-[2.5rem] shadow-[0_20px_40px_rgba(0,0,0,0.8)] sm:shadow-[0_40px_80px_rgba(0,0,0,0.8)] border border-yellow-500/40 luxury-glow p-3 sm:p-6 lg:p-10 w-[220px] sm:max-w-[280px] lg:max-w-[360px]">
+                <div className="space-y-2 sm:space-y-4 lg:space-y-6">
                   {/* Premium Header Section */}
-                  <div className="text-center space-y-3 sm:space-y-4">
-                    <div className="relative mx-auto w-14 h-14 sm:w-16 sm:h-16 lg:w-18 lg:h-18">
-                      <div className="absolute inset-0 gold-gradient rounded-2xl sm:rounded-3xl shadow-2xl luxury-glow"></div>
-                      <div className="relative w-full h-full rounded-2xl sm:rounded-3xl bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center transform hover:scale-105 transition-transform duration-500">
-                        <Shield className="h-7 w-7 sm:h-8 sm:w-8 lg:h-9 lg:w-9 text-black drop-shadow-lg" />
+                  <div className="text-center space-y-2 sm:space-y-3 lg:space-y-4">
+                    <div className="relative mx-auto w-10 h-10 sm:w-14 sm:h-14 lg:w-18 lg:h-18">
+                      <div className="absolute inset-0 gold-gradient rounded-xl sm:rounded-2xl lg:rounded-3xl shadow-2xl luxury-glow"></div>
+                      <div className="relative w-full h-full rounded-xl sm:rounded-2xl lg:rounded-3xl bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center transform hover:scale-105 transition-transform duration-500">
+                        <Shield className="h-5 w-5 sm:h-7 sm:w-7 lg:h-9 lg:w-9 text-black drop-shadow-lg" />
                       </div>
                     </div>
                     
                     <div className="space-y-1 sm:space-y-2">
-                      <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-yellow-300 tracking-wide">
+                      <h3 className="text-sm sm:text-lg lg:text-2xl font-semibold text-yellow-300 tracking-wide">
                         Sterile Protocol
                       </h3>
                       <p className="text-yellow-200/90 text-xs sm:text-sm lg:text-base font-light leading-relaxed">
@@ -143,37 +143,37 @@ const Index = () => {
                   </div>
                   
                   {/* Elegant Divider */}
-                  <div className="relative py-2 sm:py-3">
+                  <div className="relative py-1 sm:py-2 lg:py-3">
                     <div className="absolute inset-0 flex items-center">
                       <div className="w-full h-px bg-gradient-to-r from-transparent via-yellow-500/60 to-transparent"></div>
                     </div>
                     <div className="relative flex justify-center">
-                      <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full shadow-lg luxury-glow"></div>
+                      <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 w-1 h-1 sm:w-1.5 sm:h-1.5 lg:w-2 lg:h-2 rounded-full shadow-lg luxury-glow"></div>
                     </div>
                   </div>
                   
                   {/* Professional Rating Display */}
-                  <div className="text-center space-y-3 sm:space-y-4">
-                    <div className="flex justify-center items-center space-x-2 sm:space-x-3">
-                      <div className="flex items-center space-x-1">
+                  <div className="text-center space-y-2 sm:space-y-3 lg:space-y-4">
+                    <div className="flex justify-center items-center space-x-1 sm:space-x-2 lg:space-x-3">
+                      <div className="flex items-center space-x-0.5 sm:space-x-1">
                         {[1, 2, 3, 4].map((star) => (
-                          <Star key={star} className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current drop-shadow-md" />
+                          <Star key={star} className="h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5 text-yellow-400 fill-current drop-shadow-md" />
                         ))}
                         <div className="relative">
-                          <Star className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400/30" />
+                          <Star className="h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5 text-yellow-400/30" />
                           <div className="absolute inset-0 overflow-hidden w-1/2">
-                            <Star className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current drop-shadow-md" />
+                            <Star className="h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5 text-yellow-400 fill-current drop-shadow-md" />
                           </div>
                         </div>
                       </div>
-                      <span className="text-xl sm:text-2xl lg:text-3xl font-light text-yellow-300 tracking-wide">
+                      <span className="text-lg sm:text-xl lg:text-3xl font-light text-yellow-300 tracking-wide">
                         4.5
                       </span>
                     </div>
                     
                     <div className="inline-flex items-center justify-center">
-                      <div className="gold-gradient px-4 sm:px-5 lg:px-6 py-2 sm:py-2.5 lg:py-3 rounded-full shadow-2xl luxury-glow border border-yellow-500/30">
-                        <span className="text-black text-xs sm:text-sm lg:text-base font-semibold tracking-[0.1em] uppercase">
+                      <div className="gold-gradient px-2 sm:px-4 lg:px-6 py-1 sm:py-2 lg:py-3 rounded-full shadow-2xl luxury-glow border border-yellow-500/30">
+                        <span className="text-black text-[10px] sm:text-xs lg:text-base font-semibold tracking-[0.1em] uppercase">
                           Best in Agadir
                         </span>
                       </div>
@@ -181,8 +181,8 @@ const Index = () => {
                   </div>
                   
                   {/* Subtle Bottom Accent */}
-                  <div className="flex justify-center pt-2 sm:pt-3">
-                    <div className="w-8 sm:w-10 lg:w-12 h-0.5 bg-gradient-to-r from-transparent via-yellow-400/80 to-transparent rounded-full shadow-md luxury-glow"></div>
+                  <div className="flex justify-center pt-1 sm:pt-2 lg:pt-3">
+                    <div className="w-6 sm:w-8 lg:w-12 h-0.5 bg-gradient-to-r from-transparent via-yellow-400/80 to-transparent rounded-full shadow-md luxury-glow"></div>
                   </div>
                 </div>
               </div>
