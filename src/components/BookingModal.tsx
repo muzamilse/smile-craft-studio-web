@@ -31,10 +31,10 @@ const BookingModal = ({ children }: { children: React.ReactNode }) => {
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-md bg-white">
+      <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-xl font-semibold text-gray-800">Book Your Free Consultation</DialogTitle>
-          <DialogDescription className="text-gray-600">
+          <DialogTitle className="text-xl font-semibold">Book Your Free Consultation</DialogTitle>
+          <DialogDescription>
             Take the first step towards your dream smile. Fill out the form below and we'll contact you within 24 hours.
           </DialogDescription>
         </DialogHeader>
@@ -78,7 +78,7 @@ const BookingModal = ({ children }: { children: React.ReactNode }) => {
               id="service"
               value={formData.service}
               onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-              className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
             >
               <option value="">Select a service</option>
               <option value="dental-implants">Dental Implants</option>
@@ -94,11 +94,11 @@ const BookingModal = ({ children }: { children: React.ReactNode }) => {
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               rows={3}
-              className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
               placeholder="Tell us about your smile goals..."
             />
           </div>
-          <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+          <Button type="submit" className="w-full">
             <Calendar className="h-4 w-4 mr-2" />
             Book Free Consultation
           </Button>
