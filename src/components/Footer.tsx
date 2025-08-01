@@ -11,7 +11,7 @@ const Footer = () => {
               <div className="w-6 h-6 sm:w-8 sm:h-8 gold-gradient rounded-full flex items-center justify-center luxury-glow">
                 <span className="text-black font-bold text-sm sm:text-base">D</span>
               </div>
-              <h3 className="text-base sm:text-lg font-semibold text-yellow-300">Dr Mourad Gamani</h3>
+              <h3 className="text-base sm:text-lg font-semibold text-yellow-300">Dr Gamani</h3>
             </div>
             <p className="text-yellow-100 text-xs sm:text-sm leading-relaxed">
               Creating beautiful, confident smiles through advanced dental implants and aesthetic treatments.
@@ -64,7 +64,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-yellow-500/40 pt-6 sm:pt-8 mt-6 sm:mt-8 text-center text-xs sm:text-sm text-yellow-200">
-          <p>&copy; 2024 Dr Mourad Gamani. All rights reserved. | Excellence in Aesthetic Dentistry</p>
+          <p>&copy; 2024 Dr Gamani. All rights reserved. | Excellence in Aesthetic Dentistry</p>
         </div>
       </div>
     </footer>

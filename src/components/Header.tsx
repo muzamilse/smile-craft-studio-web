@@ -22,12 +22,12 @@ const Header = () => {
             <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-lg sm:rounded-xl lg:rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-[0_30px_60px_rgba(212,175,55,0.4)] transition-all duration-1000 transform group-hover:scale-105 luxury-glow overflow-hidden bg-white">
               <img 
                 src="/lovable-uploads/e8af8297-0467-4e04-b16c-180abc2d02fc.png" 
-                alt="Dr Mourad Gamani Dental Clinic Logo"
+                alt="Dr Gamani Dental Clinic Logo"
                 className="w-full h-full object-contain p-0.5"
               />
             </div>
             <div className="min-w-0">
-              <h1 className="text-sm sm:text-lg lg:text-xl font-extralight text-yellow-300 tracking-tight truncate luxury-text-gradient">Dr Mourad Gamani</h1>
+              <h1 className="text-sm sm:text-lg lg:text-xl font-extralight text-yellow-300 tracking-tight truncate luxury-text-gradient">Dr Gamani</h1>
               <p className="text-xs sm:text-sm lg:text-base text-yellow-200 font-light tracking-wide hidden sm:block">Oral Surgery & Aesthetic Dentistry</p>
             </div>
           </Link>
