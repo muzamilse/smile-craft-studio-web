@@ -121,7 +121,7 @@ const Index = () => {
               </div>
               
               {/* Enhanced Ultra-Professional Sterile Protocol Badge - Mobile Optimized */}
-              <div className="absolute -bottom-4 sm:-bottom-6 lg:-bottom-10 -left-2 sm:-left-6 lg:-left-10 bg-gradient-to-br from-slate-950/98 via-gray-950/98 to-black/98 backdrop-blur-3xl rounded-2xl sm:rounded-3xl lg:rounded-[2.5rem] shadow-[0_20px_40px_rgba(0,0,0,0.8)] sm:shadow-[0_40px_80px_rgba(0,0,0,0.8)] border border-yellow-500/40 luxury-glow p-3 sm:p-6 lg:p-10 w-[220px] sm:max-w-[280px] lg:max-w-[360px]">
+              <div className="absolute bottom-4 left-4 sm:-bottom-6 sm:-left-6 lg:-bottom-10 lg:-left-10 bg-gradient-to-br from-slate-950/98 via-gray-950/98 to-black/98 backdrop-blur-3xl rounded-2xl sm:rounded-3xl lg:rounded-[2.5rem] shadow-[0_20px_40px_rgba(0,0,0,0.8)] sm:shadow-[0_40px_80px_rgba(0,0,0,0.8)] border border-yellow-500/40 luxury-glow p-3 sm:p-6 lg:p-10 w-[200px] sm:w-[280px] lg:w-[360px] z-20">
                 <div className="space-y-2 sm:space-y-4 lg:space-y-6">
                   {/* Premium Header Section */}
                   <div className="text-center space-y-2 sm:space-y-3 lg:space-y-4">
