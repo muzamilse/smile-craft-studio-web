@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, CheckCircle, Star, Phone, Shield, Award, Users, Quote } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -36,6 +37,30 @@ const testimonials = [
     text: "Résultats extraordinaires en une séance. Mon sourire n'a jamais été aussi éclatant. Une expérience de luxe du début à la fin.",
     location: "Agadir, Morocco",
     date: "Septembre 2024"
+  }
+];
+
+const customerResults = [
+  {
+    id: 1,
+    before: "/lovable-uploads/29f0f0e2-127f-43c6-8bd4-b9f4144b259c.png",
+    after: "/lovable-uploads/8c3ba33e-becb-4845-9d18-34c6440ef6a8.png",
+    treatment: "Dental Implants & Smile Makeover",
+    duration: "6 months"
+  },
+  {
+    id: 2,
+    before: "/lovable-uploads/1c4eb72a-fe1f-4ea2-b695-473bde41bf5d.png",
+    after: "/lovable-uploads/15b53714-b7c1-4647-9399-0ff34e382666.png",
+    treatment: "Porcelain Veneers",
+    duration: "3 weeks"
+  },
+  {
+    id: 3,
+    before: "/lovable-uploads/6c456fbf-e7ed-4047-8c8d-862913e14c79.png",
+    after: "/lovable-uploads/57e19360-5f1a-49fb-83e1-7ec1cc022da2.png",
+    treatment: "Implant Restoration",
+    duration: "4 months"
   }
 ];
 
@@ -352,6 +377,81 @@ const Index = () => {
                   {t('excellence.certification.desc')}
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Customer Results Section - Before Testimonials */}
+        <section className="py-20 sm:py-32 lg:py-40 bg-gradient-to-b from-black/95 via-gray-900/95 to-black/95 backdrop-blur-lg">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+            <div className="text-center mb-16 sm:mb-24 lg:mb-32 max-w-6xl mx-auto">
+              <div className="inline-flex items-center px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 bg-gradient-to-r from-yellow-600/30 via-amber-500/25 to-yellow-700/30 border border-yellow-500/60 rounded-full shadow-2xl backdrop-blur-lg mb-6 sm:mb-8 lg:mb-10 luxury-glow">
+                <span className="text-yellow-300 font-light text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] uppercase">Résultats Remarquables</span>
+              </div>
+              
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extralight text-yellow-400 mb-6 sm:mb-8 lg:mb-10 tracking-tighter leading-tight luxury-text-gradient">
+                Our Happy <span className="text-yellow-300 italic font-thin">Customer Results</span>
+              </h2>
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-yellow-100 font-light leading-relaxed tracking-wide max-w-4xl mx-auto">
+                Découvrez les transformations spectaculaires de nos patients
+              </p>
+            </div>
+
+            <div className="max-w-7xl mx-auto">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full"
+              >
+                <CarouselContent className="-ml-2 md:-ml-4">
+                  {customerResults.map((result) => (
+                    <CarouselItem key={result.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                      <Card className="group hover:shadow-[0_30px_60px_rgba(212,175,55,0.3)] transition-all duration-1000 transform hover:-translate-y-4 border border-yellow-500/60 shadow-xl bg-black/95 backdrop-blur-lg rounded-xl sm:rounded-2xl lg:rounded-[2.5rem] overflow-hidden hover:border-yellow-400/80 luxury-glow">
+                        <CardContent className="p-0">
+                          <div className="grid grid-cols-1 gap-1">
+                            {/* Before Image */}
+                            <div className="relative">
+                              <AspectRatio ratio={16 / 12}>
+                                <img 
+                                  src={result.before}
+                                  alt="Before treatment"
+                                  className="w-full h-full object-cover"
+                                />
+                                <div className="absolute top-4 left-4 bg-red-600/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
+                                  Avant
+                                </div>
+                              </AspectRatio>
+                            </div>
+                            
+                            {/* After Image */}
+                            <div className="relative">
+                              <AspectRatio ratio={16 / 12}>
+                                <img 
+                                  src={result.after}
+                                  alt="After treatment"
+                                  className="w-full h-full object-cover"
+                                />
+                                <div className="absolute top-4 left-4 bg-green-600/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
+                                  Après
+                                </div>
+                              </AspectRatio>
+                            </div>
+                          </div>
+                          
+                          <div className="p-6 sm:p-8">
+                            <h3 className="text-lg sm:text-xl font-light text-yellow-300 mb-2 tracking-wide">{result.treatment}</h3>
+                            <p className="text-yellow-100 text-sm opacity-80">Durée: {result.duration}</p>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="border-yellow-500/60 bg-black/80 hover:bg-yellow-900/30 text-yellow-300 hover:text-yellow-100 backdrop-blur-lg luxury-glow" />
+                <CarouselNext className="border-yellow-500/60 bg-black/80 hover:bg-yellow-900/30 text-yellow-300 hover:text-yellow-100 backdrop-blur-lg luxury-glow" />
+              </Carousel>
             </div>
           </div>
         </section>
